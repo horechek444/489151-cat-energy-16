@@ -33,6 +33,87 @@
 
     <main class="page-main">
 
+      <h1 class="visually-hidden">Питание «Cat energy» для корректировки веса вашего питомца</h1>
+
+      <section class="program-selection">
+        <h2 class="program-selection__main-title">Подбор программы</h2>
+        <p class="program-selection__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <fieldset>
+          <legend class="visually-hidden"><h3>Анкета:</h3></legend>
+          <p>
+            <label class="program-selection__label" for="login">Имя:*</label>
+            <input class="program-selection__user" id="login" type="text" name="login" placeholder="Барсик" required>
+          </p>
+          <p>
+            <label class="program-selection__label" for="weight">Вес (кг):*</label>
+            <input class="program-selection__user" id="weight" type="number" name="weight" placeholder="7" required>
+          </p>
+          <p>
+            <label class="program-selection__label" for="age">Возраст (лет):</label>
+            <input class="program-selection__user" id="age" type="number" name="age" placeholder="7">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend class="visually-hidden"><h3>Выбор типа корректировки веса:</h3></legend>
+          <ul class="program-selection__list">
+            <li class="program-selection__item">
+              <input class="visually-hidden" id="filter__slim" type="radio" name="final-result" value="slim" checked>
+              <label for="filter__slim">Похудение</label>
+            </li>
+            <li class="program-selection__item">
+              <input class="visually-hidden" id="filter__weight-gain"  type="radio" name="final-result" value="weight-gain">
+              <label for="filter__weight-gain">Набор массы</label>
+            </li>
+            <li class="program-selection__item">
+              <input class="visually-hidden" id="filter__unknown"  type="radio" name="final-result" value="unknown">
+              <label for="filter__unknown">Не знаю (нужен ваш совет)</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset>
+          <legend class="program-selection__legend"><h3>Контактные данные (владельца кота)</h3></legend>
+          <p>
+            <label class="program-selection__label" for="email">E-mail:*</label>
+            <input class="program-selection__user" id="email" type="email" name="email" placeholder="kuklachev@gmail.com">
+          </p>
+          <p>
+            <label class="program-selection__label" for="phone">Телефон:*</label>
+            <input class="program-selection__user" id="phone" type="tel" name="phone" placeholder="8(960)900-60-90" required>
+          </p>
+        </fieldset>
+
+        <div>
+          <label class="program-selection__legend" for="comment__text"><h3>Комментарий</h3></label>
+          <textarea class="program-selection__user" id="comment__text" name="comment" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </div>
+
+        <fieldset>
+          <legend class="program-selection__legend"><h3>Дополнительно:</h3></legend>
+          <ul class="program-selection__list">
+            <li class="program-selection__item">
+              <input class="visually-hidden" id="filter__sweetener" type="checkbox" name="sweetener" checked>
+              <label for="filter__sweetener">Сахарозаменитель</label>
+            </li>
+            <li class="program-selection__item">
+              <input class="visually-hidden" id="filter__water" type="checkbox" name="water">
+              <label for="filter__water">Питьевая вода</label>
+            </li>
+            <li class="program-selection__item">
+              <input class="visually-hidden" id="filter__milk" type="checkbox" name="milk">
+              <label for="filter__milk">Молоко</label>
+            </li>
+            <li class="program-selection__item">
+              <input class="visually-hidden" id="filter__vitamins" type="checkbox" name="vitamins">
+              <label for="filter__vitamins">Витамины</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="button" type="submit">Отправить</button>
+        <p>* - Обязательные поля</p>
+      </section>
+
       <section class="contacts">
         <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
         <p class="contacts__description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
@@ -67,5 +148,5 @@
       </div>
     </footer>
 
-</body>
+  </body>
 </html>
