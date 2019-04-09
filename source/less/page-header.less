@@ -1,14 +1,37 @@
 .page-header {
-  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
 
-  .page-wrapper {
-    padding-top: 11px;
-    padding-bottom: 16px;
+  background-color: #ffffff;
+}
+
+.page-header__logo {
+  height: 65px;
+
+  .header-wrapper {
+    display: flex;
+    flex-direction: column;
   }
 }
 
-.page-header__logo-name {
-  margin-top: 4px;
-  margin-left: 57px;
-  margin-right: 65px;
+@media (min-width: @tablet-width) {
+  .page-header__logo {
+    height: 110px;
+  }
+
+  .header-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo {
+    height: 135px;
+  }
+
+  .header-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
 }
