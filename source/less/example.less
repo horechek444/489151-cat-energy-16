@@ -1,5 +1,22 @@
 .example {
   background-color: #f2f2f2;
+
+  /* Временно для сетки */
+  min-height: 705px;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    /* Временно для сетки */
+    min-height: 1081px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    /* Временно для сетки */
+    min-height: 662px;
+  }
 }
 
 .example__title {

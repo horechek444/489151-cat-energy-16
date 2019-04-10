@@ -15,6 +15,45 @@
 
 .work-principles__list {
   .list-reset();
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  /* Временно для сетки */
+  min-height: 430px;
+}
+
+.work-principles__item {
+  min-width: 60px;
+}
+
+@media (min-width: @tablet-width) {
+  .work-principles__list {
+    .list-reset();
+    flex-direction: column;
+    min-width: 708px;
+
+    /* Временно для сетки */
+    min-height: 754px;
+  }
+
+  .work-principles__item {
+    min-width: 284px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .work-principles__list {
+    .list-reset();
+    flex-direction: row;
+    min-width: 1220px;
+
+    /* Временно для сетки */
+    min-height: 415px;
+  }
+
+  .work-principles__item {
+    min-width: 284px;
+  }
 }
 
 .work-principles__description {

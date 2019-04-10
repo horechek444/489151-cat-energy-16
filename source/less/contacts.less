@@ -1,5 +1,9 @@
 .contacts {
   background-color: #ffffff;
+
+  .page-wrapper {
+    margin: 0 auto;
+  }
 }
 
 .contacts__color {
@@ -26,4 +30,39 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
+}
+
+.contacts-wrapper {
+  padding: 0;
+  /* Временно для сетки */
+  min-height: 114px;
+}
+
+.contacts__map {
+  /* Временно для сетки */
+  min-height: 362px;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts-wrapper {
+    /* Временно для сетки */
+    min-height: 201px;
+  }
+
+  .contacts__map {
+    /* Временно для сетки */
+    min-height: 396px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts-wrapper {
+    min-width: 570px;
+    min-height: 201px;
+  }
+
+  .contacts__map {
+    /* Временно для сетки */
+    min-height: 400px;
+  }
 }

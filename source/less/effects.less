@@ -1,4 +1,5 @@
 .effects {
+  margin: 0 auto;
   margin-bottom: 12px;
   padding: 0;
 
@@ -7,11 +8,49 @@
 
 .effects__list {
   .list-reset();
+  display: flex;
+  flex-direction: column;
+  /* Временно для сетки */
+  min-height: 590px;
 }
 
 .effects__item {
-  padding: 20px;
   background-color: #f2f2f2;
+  min-width: 280px;
+  /* Временно для сетки */
+  min-height: 266px;
+}
+
+@media (min-width: @tablet-width) {
+  .effects__list {
+    .list-reset();
+    flex-direction: column;
+    /* Временно для сетки */
+    min-height: 800px;
+  }
+
+  .effects__item {
+    background-color: #f2f2f2;
+    min-width: 708px;
+    /* Временно для сетки */
+    min-height: 372px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .effects__list {
+    .list-reset();
+    flex-direction: row;
+    /* Временно для сетки */
+    min-height: 485px;
+  }
+
+  .effects__item {
+    background-color: #f2f2f2;
+    min-width: 570px;
+    /* Временно для сетки */
+    min-height: 372px;
+  }
 }
 
 .effects__title {

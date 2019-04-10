@@ -1,5 +1,7 @@
 .catalog {
   background-color: #ffffff;
+  /* Временно для сетки */
+  min-height: 1567px;
 }
 
 .catalog__main-title {
@@ -13,7 +15,37 @@
 }
 
 .catalog__list {
+  display: flex;
+  flex-direction: column;
   .list-reset();
+}
+
+@media (min-width: @tablet-width) {
+  .catalog {
+    min-width: 708px;
+    /* Временно для сетки */
+    min-height: 2445px;
+  }
+
+  .catalog__list {
+    display: flex;
+    flex-direction: row;
+    .list-reset();
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog {
+    min-width: 1230px;
+    /* Временно для сетки */
+    min-height: 1326px;
+  }
+
+  .catalog__list {
+    display: flex;
+    flex-direction: row;
+    .list-reset();
+  }
 }
 
 .catalog__item {

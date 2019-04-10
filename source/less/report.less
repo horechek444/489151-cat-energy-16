@@ -1,11 +1,28 @@
 .report {
-  background-color: #63a73a;  //вспомогательный
+  margin: 0 auto;
+  min-width: 320px;
+  /* Временно для сетки */
+  min-height: 480px;
+}
+
+@media (min-width: @tablet-width) {
+  .report {
+    /* Временно для сетки */
+    min-height: 840px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .report {
+    /* Временно для сетки */
+    min-height: 554px;
+  }
 }
 
 .report__slogan {
   position: absolute;
 
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 
   text-align: center;
@@ -19,7 +36,7 @@
 .report__intro {
   position: absolute;
 
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 
   font-size: 14px;
@@ -32,7 +49,6 @@
 }
 
 .report__banner {
-  min-width: 320px;
   background-color: #63a73a;
 }
 

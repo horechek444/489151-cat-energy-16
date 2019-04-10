@@ -13,7 +13,28 @@
 }
 
 .optional-goods__list {
+  display: flex;
+  flex-direction: column;
   .list-reset();
+
+  /* Временно для сетки */
+  min-height: 604px;
+}
+
+@media (min-width: @tablet-width) {
+  .optional-goods__list {
+    .list-reset();
+    /* Временно для сетки */
+    min-height: 696px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .optional-goods__list {
+    .list-reset();
+    /* Временно для сетки */
+    min-height: 523px;
+  }
 }
 
 .optional-goods__title {
