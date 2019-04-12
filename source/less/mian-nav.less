@@ -16,9 +16,6 @@
 
 .main-nav__list {
   .list-reset();
-}
-
-.site-list {
   /* Временно для сетки */
   min-height: 199px;
 }
@@ -29,32 +26,21 @@
     margin: 0;
   }
 
-  .main-nav__wrapper {
-    margin-left: 66px;
-    margin-right: 20px;
-  }
-
-  .site-list {
+  .main-nav__list {
     display: flex;
-    justify-content: space-between;
-    width: 516px;
+    justify-content: flex-end;
+    width: 485px;
     /* Временно для сетки */
-    min-height: 110px;
+    min-height: 100px;
   }
 }
 
 
 @media (min-width: @desktop-width) {
-  .main-nav__wrapper {
-    margin-left: 132px;
-    margin-right: 110px;
-  }
-
-  .site-list {
+   .main-nav__list {
     width: 720px;
-    justify-content: flex-end;
     /* Временно для сетки */
-    min-height: 140px;
+    min-height: 142px;
   }
 }
 

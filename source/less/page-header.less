@@ -11,31 +11,20 @@
 
 .page-header__logo {
   height: 65px;
-
-  .header-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 @media (min-width: @tablet-width) {
-  .page-header__logo {
-    height: 110px;
+  .page-header {
+    flex-direction: row;
   }
 
-  .header-wrapper {
-    display: flex;
-    flex-direction: row;
+  .page-header__logo {
+    height: 100px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header__logo {
-    height: 135px;
-  }
-
-  .header-wrapper {
-    display: flex;
-    flex-direction: row;
+    height: 142px;
   }
 }
