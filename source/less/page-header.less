@@ -16,6 +16,8 @@
 @media (min-width: @tablet-width) {
   .page-header {
     flex-direction: row;
+    //justify-content: space-between;
+    min-width: @desktop-width;
   }
 
   .page-header__logo {
@@ -24,7 +26,11 @@
 }
 
 @media (min-width: @desktop-width) {
+  .page-header {
+    min-width: @desktop-width;
+  }
+
   .page-header__logo {
-    height: 142px;
+    height: 0;
   }
 }

@@ -1,22 +1,10 @@
 .example {
-  background-color: #f2f2f2;
+  margin: 0 auto;
+  width: 320px;
+  background-color: @bg-lightgrey;
 
   /* Временно для сетки */
   min-height: 705px;
-}
-
-@media (min-width: @tablet-width) {
-  .example {
-    /* Временно для сетки */
-    min-height: 1081px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .example {
-    /* Временно для сетки */
-    min-height: 662px;
-  }
 }
 
 .example__title {
@@ -66,6 +54,16 @@
   text-transform: uppercase;
 }
 
+.example__image {
+  width: 311px;
+  min-height: 232px;
+
+  background-image: url("../img/before-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #f2f2f2;
+}
+
 .example__range {
   margin: 0;
   padding: 0;
@@ -75,4 +73,53 @@
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    width: @tablet-width;
+    background-color: #ffffff;
+    /* Временно для сетки */
+    min-height: 1081px;
+  }
+
+  .example__image {
+    margin: 0 auto;
+    width: 677px;
+    min-height: 499px;
+
+    background-image: url("../img/before-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  .example__image-wrapper {
+    background-color: @bg-lightgrey; /* Два разных цвета фона и две кошки */
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    width: 1220px;
+    background-color: @bg-lightgrey;
+    /* Временно для сетки */
+    min-height: 662px;
+  }
+
+  .example__title {
+    background-color: #ffffff;
+  }
+
+  .example__image {
+    width: 677px;
+    min-height: 499px;
+
+    background-image: url("../img/before-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+  .example-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
 }

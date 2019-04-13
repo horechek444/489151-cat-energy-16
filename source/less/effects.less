@@ -1,18 +1,19 @@
 .effects {
   margin: 0 auto;
   width: 320px;
-  margin-bottom: 12px;
+  //margin-bottom: 12px;
   padding: 0;
 
   background-color: #ffffff;
 }
 
 .effects__list {
-  min-width: 280px;
-  .list-reset();
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  //flex-wrap: wrap;
+
+  width: 280px;
+  .list-reset();
 }
 
 .effects__item {
@@ -58,17 +59,18 @@
 
 @media (min-width: @tablet-width) {
   .effects {
-    width: @tablet-width;
+    width: 708px;
   }
 
   .effects__item {
-    min-width: 708px;
+    padding: 52px;
+    min-width: 604px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .effects {
-    width: @desktop-width;
+    width: 1220px;
   }
 
   .effects__list {
@@ -76,6 +78,6 @@
   }
 
   .effects__item {
-    min-width: 570px;
+    min-width: 466px;
   }
 }
