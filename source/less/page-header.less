@@ -1,4 +1,6 @@
 .page-header {
+  margin: 0 auto;
+  width: 320px;
   display: flex;
   flex-direction: column;
 
@@ -16,18 +18,17 @@
 @media (min-width: @tablet-width) {
   .page-header {
     flex-direction: row;
-    //justify-content: space-between;
-    min-width: @desktop-width;
+    width: @tablet-width;
   }
 
-  .page-header__logo {
-    height: 100px;
+  .page-header__logo-image {
+    height: 58px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
-    min-width: @desktop-width;
+    width: @desktop-width;
   }
 
   .page-header__logo {

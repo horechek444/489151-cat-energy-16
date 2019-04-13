@@ -1,10 +1,11 @@
 .other-goods {
+  margin: 0 auto;
+  width: 320px;
   background-color: #ffffff;
 }
 
 .other-goods__title {
   margin-bottom: 11px;
-  margin-left: 60px;
 
   color: #111111;
   font-size: 16px;
@@ -18,8 +19,28 @@
   padding: 0;
 
   color: #444444;
-  font-family: "Arial", sans-serif;
+  font-family: "Arial MT", sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .other-goods {
+    width: 324px;
+    background-color: #ffffff;
+    border: 1px solid #cdcdcd;
+    /* Временно для сетки */
+    min-height: 432px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .other-goods {
+    margin: 0 auto;
+    width: 245px;
+    /* Временно для сетки */
+    min-height: 432px;
+  }
 }

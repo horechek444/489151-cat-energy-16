@@ -58,6 +58,7 @@
 
 @media (min-width: @tablet-width) {
   .report {
+    position: relative;
     min-width: @tablet-width;
   }
 
@@ -108,9 +109,9 @@
   }
 
   .report .report__button {
-    position: absolute;  /* не знаю как её разместить*/
-    top: 369px;
-    left: 339px;
+    position: absolute;
+    top: 269px;
+    left: 98px;
 
     padding: 16px 27px;
 
@@ -148,5 +149,17 @@
     background-image: url("../img/index-can-desktop@1x.png");
     background-repeat: no-repeat;
     background-position: 0 0;
+  }
+
+  .report .report__button {
+    position: absolute;
+    top: 456px;
+    left: 169px;
+
+    padding: 16px 27px;
+
+    font-size: 20px;
+    line-height: 20px;
+    z-index: 10;
   }
 }
