@@ -61,7 +61,6 @@
   line-height: 20px;
 
   &--show {
-    margin: 25px 20px;
     padding: 12px 94px;
     color: #444444;
     font-size: 16px;
@@ -94,6 +93,9 @@
   .catalog__item {
     min-width: 324px;
     background-color: @bg-lightgrey;
+    &--show {
+      border: 1px solid #cdcdcd;
+    }
   }
 
   .catalog__item-wrapper {
@@ -146,7 +148,7 @@
     margin-top: 33px;
   }
 
-  .catalog__order--show {
+  .catalog__item--show .catalog__order--show {
     padding: 12px 40px;
     margin: 40px 37px;
   }

@@ -1,13 +1,6 @@
 .report {
   margin: 0 auto;
   width: 320px;
-  /* Временно для сетки */
-  min-height: 480px;
-}
-
-.report__header {
-  width: 320px;
-  min-height: 440px;
 }
 
 .report__banner {
@@ -59,7 +52,7 @@
 @media (min-width: @tablet-width) {
   .report {
     position: relative;
-    min-width: @tablet-width;
+    width: @tablet-width;
   }
 
   .report__banner {
@@ -123,7 +116,7 @@
 
 @media (min-width: @desktop-width) {
   .report {
-    min-width: @desktop-width;
+    width: @desktop-width;
   }
 
   .report__banner {
@@ -161,5 +154,19 @@
     font-size: 20px;
     line-height: 20px;
     z-index: 10;
+  }
+
+  .report__slogan {
+    position: absolute;
+    top: 222px;
+    left: 191px;
+
+    width: 415px;
+  }
+
+  .report__intro {
+    position: absolute;
+    top: 382px;
+    left: 190px;
   }
 }

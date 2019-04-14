@@ -3,8 +3,6 @@
   margin: 0 auto;
   width: 320px;
   background-color: #ffffff;
-
-  min-height: 966px;
 }
 
 .optional-goods__main-title {
@@ -21,6 +19,7 @@
   display: flex;
   flex-direction: column;
   .list-reset();
+  margin-bottom: 400px; /* пока чтобы картинка с котом не наезжала на карту */
 }
 
 .optional-goods__title {
@@ -52,13 +51,12 @@
 
 .optional-goods__order {
   padding: 12px 109px;
-  margin: 17px 20px;
   margin-top: 14px;
 }
 
 .optional-goods__image {
   position: absolute;
-  top: 550px;
+  top: 500px;
   left: 20px;
 
   width: 280px;
@@ -111,6 +109,10 @@
     background-repeat: no-repeat;
     background-position: 0 0;
   }
+
+  .optional-goods__list {
+    margin-bottom: 250px; /* пока чтобы картинка с котом не наезжала на карту */
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -140,5 +142,9 @@
     background-image: url("../img/gift-photo-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
+  }
+
+  .optional-goods__list {
+    margin-bottom: 30px; /* временно */
   }
 }

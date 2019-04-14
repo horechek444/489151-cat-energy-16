@@ -35,7 +35,7 @@
 
   .main-nav__list {
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
     width: 485px;
   }
 }
@@ -43,6 +43,11 @@
 @media (min-width: @desktop-width) {
   .main-nav {
     width: @tablet-width;
+    &--desktop {
+      position: absolute;
+      top: 73px;
+      left: 852px;
+    }
   }
 
   .main-nav__list {
