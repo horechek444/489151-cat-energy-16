@@ -6,8 +6,6 @@
   font-size: 20px;
   line-height: 25px;
   text-transform: uppercase;
-
-  background-color: #ffffff;
 }
 
 .main-nav__list {
@@ -35,24 +33,18 @@
 
   .main-nav__list {
     display: flex;
-    //justify-content: space-between;
     width: 485px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-nav {
-    width: @tablet-width;
-    &--desktop {
-      position: absolute;
-      top: 73px;
-      left: 852px;
-    }
+    width: @desktop-width;
   }
 
   .main-nav__list {
-    width: 720px;
-    height: 0;
+    margin-top: 74px;
+    margin-left: 572px;
   }
 
   .main-nav__link {

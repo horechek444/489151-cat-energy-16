@@ -2,10 +2,13 @@
   position: relative;
   margin: 0 auto;
   width: 320px;
-  display: flex;
-  flex-direction: column;
 
   background-color: #ffffff;
+}
+
+.page-header--desktop {
+  display: flex;
+  flex-direction: column;
 }
 
 .header-wrapper {
@@ -14,8 +17,11 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
-    flex-direction: row;
     width: @tablet-width;
+  }
+
+  .page-header--desktop {
+    flex-direction: row;
   }
 
   .page-header__logo-image {
@@ -28,9 +34,13 @@
     width: @desktop-width;
   }
 
-  .page-header__logo--desktop {
+  .page-header__logo {
+    margin-top: 54px;
+    margin-left: 110px;
+  }
+
+  .page-header--desktop {
     position: absolute;
-    top: 54px;
-    left: 110px;
+    background: none;
   }
 }
