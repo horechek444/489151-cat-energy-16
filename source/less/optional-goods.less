@@ -22,6 +22,15 @@
   margin-bottom: 400px; /* пока чтобы картинка с котом не наезжала на карту */
 }
 
+.optional-goods__item {
+  margin-bottom: 20px;
+  border-top: 1px solid #cdcdcd;
+}
+
+.optional-goods__item:last-child {
+  border-bottom: 1px solid #cdcdcd;
+}
+
 .optional-goods__title {
   color: #222222;
   font-size: 16px;
@@ -35,7 +44,7 @@
   padding: 0;
 
   color: #444444;
-  font-family: "Arial", sans-serif;
+  font-family: "Arial MT", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
@@ -56,7 +65,7 @@
 
 .optional-goods__image {
   position: absolute;
-  top: 500px;
+  top: 550px;
   left: 20px;
 
   width: 280px;
@@ -69,7 +78,7 @@
 
 @media (min-width: @tablet-width) {
   .optional-goods {
-    width: 708px;
+    width: @tablet-width;
   }
 
   .optional-goods__main-title {
@@ -87,14 +96,20 @@
     line-height: 20px;
   }
 
+  .optional-goods__list {
+    width: 708px;
+    margin-bottom: 250px; /* пока чтобы картинка с котом не наезжала на карту */
+  }
+
   .optional-goods__item {
     border: 1px solid #cdcdcd;
+    border-bottom: none;
+    margin: 0;
   }
 
   .optional-goods__order {
     padding: 12px 286px;
-    margin: 27px 37px;
-    margin-top: 26px;
+    margin: 26px 37px;
   }
 
   .optional-goods__image {
@@ -109,10 +124,6 @@
     background-repeat: no-repeat;
     background-position: 0 0;
   }
-
-  .optional-goods__list {
-    margin-bottom: 250px; /* пока чтобы картинка с котом не наезжала на карту */
-  }
 }
 
 @media (min-width: @desktop-width) {
@@ -123,6 +134,7 @@
   .optional-goods__item {
     display: flex;
     border: none;
+    border-top: 1px solid #cdcdcd;
   }
 
   .optional-goods__order {
