@@ -1,4 +1,7 @@
 .optional-goods {
+  position: relative;
+  margin: 0 auto;
+  width: 320px;
   background-color: #ffffff;
 }
 
@@ -13,10 +16,19 @@
 }
 
 .optional-goods__list {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  .list-reset();
+  margin-bottom: 400px; /* пока чтобы картинка с котом не наезжала на карту */
+}
 
-  list-style: none;
+.optional-goods__item {
+  margin-bottom: 20px;
+  border-top: 1px solid #cdcdcd;
+}
+
+.optional-goods__item:last-child {
+  border-bottom: 1px solid #cdcdcd;
 }
 
 .optional-goods__title {
@@ -32,18 +44,119 @@
   padding: 0;
 
   color: #444444;
-  font-family: "Arial", sans-serif;
+  font-family: "Arial MT", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
 }
 
 .optional-goods__description {
-  position: absolute;
-
   color: #ffffff;
-  font-family: "Arial", sans-serif;
+  font-family: "Arial MT", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
+}
+
+.optional-goods__order {
+  padding: 12px 109px;
+  margin-top: 14px;
+}
+
+.optional-goods__image {
+  position: absolute;
+  top: 550px;
+  left: 20px;
+
+  width: 280px;
+  height: 289px;
+
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+@media (min-width: @tablet-width) {
+  .optional-goods {
+    width: @tablet-width;
+  }
+
+  .optional-goods__main-title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .optional-goods__title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .optional-goods__property {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .optional-goods__list {
+    width: 708px;
+    margin-bottom: 250px; /* пока чтобы картинка с котом не наезжала на карту */
+  }
+
+  .optional-goods__item {
+    border: 1px solid #cdcdcd;
+    border-bottom: none;
+    margin: 0;
+  }
+
+  .optional-goods__order {
+    padding: 12px 286px;
+    margin: 26px 37px;
+  }
+
+  .optional-goods__image {
+    position: absolute;
+    top: 700px;
+    left: 0;
+
+    width: 708px;
+    height: 200px;
+
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .optional-goods {
+    width: 1220px;
+  }
+
+  .optional-goods__item {
+    display: flex;
+    border: none;
+    border-top: 1px solid #cdcdcd;
+  }
+
+  .optional-goods__order {
+    padding: 12px 92px;
+    margin: 27px 37px;
+    margin-top: 26px;
+  }
+
+  .optional-goods__image {
+    position: absolute;
+    top: 91px;
+    left: 1000px;
+
+    width: 245px;
+    height: 289px;
+
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  .optional-goods__list {
+    margin-bottom: 30px; /* временно */
+  }
 }

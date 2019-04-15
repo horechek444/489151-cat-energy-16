@@ -1,19 +1,24 @@
 .effects {
-  margin-bottom: 12px;
+  margin: 0 auto;
+  width: 320px;
   padding: 0;
 
   background-color: #ffffff;
 }
 
 .effects__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  display: flex;
+  flex-direction: column;
+  //flex-wrap: wrap;
+
+  width: 280px;
+  .list-reset();
 }
 
 .effects__item {
   padding: 20px;
-  background-color: #f2f2f2;
+  background-color: @bg-lightgrey;
+  min-width: 280px;
 }
 
 .effects__title {
@@ -32,7 +37,7 @@
   padding: 0;
 
   color: #444444;
-  font-family: "Arial", sans-serif;
+  font-family: "Arial MT", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
@@ -47,4 +52,44 @@
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .effects {
+    width: 708px;
+  }
+
+  .effects__item {
+    padding: 52px;
+    min-width: 604px;
+  }
+
+  .effects__title {
+    font-size: 36px;
+    line-height: 37px;
+  }
+
+  .effects__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .effects__folder {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .effects {
+    width: 1220px;
+  }
+
+  .effects__list {
+    flex-direction: row;
+  }
+
+  .effects__item {
+    min-width: 466px;
+  }
 }

@@ -1,4 +1,6 @@
 .program-selection {
+  margin: 0 auto;
+  width: 320px;
   background-color: #ffffff;
 }
 
@@ -25,6 +27,7 @@
 
 .program-selection__wrapper {
   border: none;
+  padding: 0;
 }
 
 .program-selection__label {
@@ -35,40 +38,35 @@
   text-transform: uppercase;
 }
 
-input[type="text"] {
+input[type] {
   color: #444444;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
+  border: 1px solid rgba(205, 205, 205, 0.5);
+  height: 45px;
 }
 
-input[type="email"] {
-  color: #444444;
-  font-family: "Oswald", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
-  text-transform: uppercase;
+input[name="login"] {
+  width: 229px;
 }
 
-input[type="tel"] {
-  color: #444444;
-  font-family: "Oswald", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
-  text-transform: uppercase;
+input[name="weight"] {
+  width: 204px;
 }
 
-input[type="number"] {
-  color: #444444;
-  font-family: "Oswald", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
-  text-transform: uppercase;
+input[name="age"] {
+  width: 172px;
+}
+
+input[name="email"] {
+  width: 218px;
+}
+
+input[name="phone"] {
+  width: 202px;
 }
 
 .program-selection__user {
@@ -78,13 +76,18 @@ input[type="number"] {
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
+  border: 1px solid rgba(205, 205, 205, 0.5);
+  width: 280px;
+  height: 150px;
 }
 
 .program-selection__list {
-  margin: 0;
-  padding: 0;
+  .list-reset();
+}
 
-  list-style: none;
+.program-selection__border {
+  border-top: 1px solid rgba(205, 205, 205, 0.5);
+  border-bottom: 1px solid rgba(205, 205, 205, 0.5);
 }
 
 .program-selection__legend {
@@ -103,8 +106,137 @@ input[type="number"] {
 
 .program-selection__necessary {
   color: #444444;
-  font-family: "Arial", sans-serif;
+  font-family: "Arial MT", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .program-selection {
+    width: @tablet-width;
+  }
+
+  .program-selection__main-title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .program-selection__description {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .program-selection__label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .program-selection__user {
+    font-size: 20px;
+    line-height: 30px;
+    width: 631px;
+    height: 174px;
+  }
+
+  input[type] {
+    font-size: 20px;
+    line-height: 20px;
+    height: 52px;
+  }
+
+  input[name="login"] {
+    width: 567px;
+  }
+
+  input[name="weight"] {
+    width: 536px;
+  }
+
+  input[name="age"] {
+    width: 497px;
+  }
+
+  input[name="email"] {
+    width: 551px;
+  }
+
+  input[name="phone"] {
+    width: 535px;
+  }
+
+  .program-selection__legend {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .program-selection__border {
+    width: 630px;
+    border: 1px solid rgba(205, 205, 205, 0.5);
+  }
+
+  .program-selection__optionally {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .program-selection__necessary {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .program-selection__button {
+    padding: 16px 65px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program-selection {
+    width: @desktop-width;
+  }
+
+  .program-selection__user {
+    width: 1220px;
+    height: 174px;
+  }
+
+  input[name="login"] {
+    width: 506px;
+  }
+
+  input[name="weight"] {
+    width: 475px;
+  }
+
+  input[name="age"] {
+    width: 436px;
+  }
+
+  input[name="email"] {
+    width: 486px;
+  }
+
+  input[name="phone"] {
+    width: 472px;
+  }
+
+  .program-selection__box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .program-selection__case {
+    display: flex;
+  }
+
+  .program-selection__border {
+    width: 570px;
+  }
+
+  .program-selection__button {
+    padding: 16px 208px;
+  }
 }
