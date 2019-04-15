@@ -15,18 +15,18 @@
           <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Магазин питания для котов «Cat energy»">
         </a>
 
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
               <li class="main-nav__item main-nav__item--active">
-                <a class="main-nav__link" >Главная</a>
+                <a>Главная</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+                <a href="catalog.html">Каталог продукции</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="form.html">Подбор программы</a>
+                <a href="form.html">Подбор программы</a>
               </li>
             </ul>
           </div>
@@ -165,6 +165,23 @@
         </a>
       </div>
     </footer>
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
 
   </body>
 </html>

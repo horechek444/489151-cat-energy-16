@@ -15,6 +15,17 @@
   margin: 0 auto;
 }
 
+.page-header__logo {
+  border-bottom: 1px solid #ededed;
+}
+
+.page-header__logo-image {
+  margin-left: 20px;
+  margin-right: 65px;
+  width: 191px;
+  height: 62px; /* 65 */
+}
+
 @media (min-width: @tablet-width) {
   .page-header {
     width: @tablet-width;
@@ -24,7 +35,15 @@
     flex-direction: row;
   }
 
+  .page-header__logo {
+    border-bottom: none;
+  }
+
   .page-header__logo-image {
+    margin-top: 24px;
+    margin-left: 30px;
+    margin-right: 0;
+    width: 173px;
     height: 58px;
   }
 }
@@ -34,9 +53,11 @@
     width: @desktop-width;
   }
 
-  .page-header__logo {
+  .page-header__logo-image {
     margin-top: 54px;
     margin-left: 110px;
+    width: 202px;
+    height: 59px;
   }
 
   .page-header--desktop {
