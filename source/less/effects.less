@@ -85,36 +85,86 @@
   }
 
   .effects__item {
-    padding: 52px;
-    min-width: 604px;
+    padding-top: 76px;
+    padding-left: 52px;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-top: 76px;
+    }
   }
 
   .effects__title {
+    margin-left: 2px;
+    margin-bottom: 25px;
     font-size: 36px;
     line-height: 37px;
+  }
+
+  .effects__item:last-child .effects__description {
+    max-width: 340px;
+    letter-spacing: -0.2px;
   }
 
   .effects__description {
     font-size: 16px;
     line-height: 24px;
+    max-width: 380px;
+    letter-spacing: -0.1px;
+
+    margin-bottom: 56px;
+
+    &::after {
+      content: none;
+    }
   }
 
   .effects__folder {
+    display: block;
     font-size: 20px;
     line-height: 20px;
+
+    margin-bottom: 62px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .effects {
     width: 1220px;
+    margin-bottom: 74px;
   }
 
   .effects__list {
     flex-direction: row;
   }
 
+  .effects__title {
+    margin-left: 164px;
+    margin-bottom: 74px;
+    font-size: 36px;
+    line-height: 37px;
+  }
+
   .effects__item {
-    min-width: 466px;
+    max-width: 570px;
+    padding-right: 55px;
+    margin-right: 80px;
+    margin-bottom: 0;
+
+    &:last-child {
+      padding-right: 68px;
+      margin-right: 0;
+    }
+  }
+
+  .effects__description {
+    max-width: 463px;
+    margin-bottom: 30px;
+  }
+
+  .effects__item:last-child .effects__description {
+    max-width: 450px;
   }
 }
