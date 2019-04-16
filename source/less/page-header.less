@@ -3,12 +3,10 @@
   margin: 0 auto;
   width: 320px;
 
-  background-color: #ffffff;
-}
-
-.page-header--desktop {
   display: flex;
   flex-direction: column;
+
+  background-color: #ffffff;
 }
 
 .header-wrapper {
@@ -29,9 +27,6 @@
 @media (min-width: @tablet-width) {
   .page-header {
     width: @tablet-width;
-  }
-
-  .page-header--desktop {
     flex-direction: row;
   }
 
@@ -72,7 +67,7 @@
     height: 59px;
   }
 
-  .page-header--desktop {
+  .page-main-header {
     position: absolute;
     background: none;
   }

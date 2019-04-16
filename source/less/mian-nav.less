@@ -90,13 +90,7 @@
     display: none;
   }
 
-  .main-nav--opened .main-nav__wrapper {  /* сделать чтобы всё меню поднялось вверх либо остальное съехало вниз */
-    position: absolute;
-    top: 66px;
-    right: 0;
-    left: 0;
-    z-index: 10;
-
+  .main-nav--opened {  /* сделать чтобы всё меню поднялось вверх либо остальное съехало вниз */
     min-height: 15vh; /* хватит ли */
 
     background-color: #ffffff;
@@ -106,7 +100,7 @@
     display: none;
   }
 
-  .main-nav--nojs .main-nav__wrapper {
+  .main-nav--nojs {
     position: static;
     min-height: 0;
   }
