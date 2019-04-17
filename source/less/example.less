@@ -1,5 +1,8 @@
 .example {
+  position: relative;
   margin: 0 auto;
+  padding-left: 41px;
+  padding-top: 18px;
   width: 320px;
   background-color: @bg-lightgrey;
 }
@@ -7,7 +10,7 @@
 .example__title {
   margin: 0;
   padding: 0;
-  padding-bottom: 33px;
+  padding-bottom: 23px;
 
   color: #111111;
   font-size: 36px;
@@ -17,7 +20,8 @@
 
 .example__description {
   margin: 0;
-  margin-bottom: 27px;
+  margin-right: 41px;
+  margin-bottom: 24px;
   padding: 0;
 
   color: #444444;
@@ -25,30 +29,71 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
+  letter-spacing: -0.1px;
+}
+
+.example__stat-wrapper {
+  display: flex;
+  margin-bottom: 36px;
 }
 
 .example__statistics {
+  margin: 0;
+  margin-right: 30px;
+  padding: 14px 42px;
+
   color: #111111;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
+  text-align: center;
   text-transform: uppercase;
+
+  border: 1px solid #cdcdcd;
+  border-radius: 2px;
+
+  &:nth-of-type(2) {
+    padding: 14px 21px;
+  }
 }
 
 .example__characteristic {
+  position: absolute;
+
+  top: 269px;
+  right: 59px;
+
+  width: 87px;
+  height: 22px;
+
   color: #444444;
   font-family: "Arial MT", sans-serif;
   font-size: 12px;
   font-weight: 400;
+  text-align: center;
   line-height: 12px;
+  background-color: @bg-lightgrey;
+
+  &:nth-of-type(2) {
+    top: 269px;
+    left: 58px;
+  }
 }
 
 .example__cost {
+  padding: 0;
+  margin-left: 47px;
+  margin-bottom: 33px;
   color: #111111;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+.example__image-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .example__image {
