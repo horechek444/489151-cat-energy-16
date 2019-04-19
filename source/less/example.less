@@ -1,7 +1,6 @@
 .example {
   position: relative;
   margin: 0 auto;
-  padding-left: 41px;
   padding-top: 18px;
   width: 320px;
   background-color: @bg-lightgrey;
@@ -9,6 +8,7 @@
 
 .example__title {
   margin: 0;
+  margin-left: 20px;
   padding: 0;
   padding-bottom: 23px;
 
@@ -20,7 +20,8 @@
 
 .example__description {
   margin: 0;
-  margin-right: 41px;
+  margin-left: 20px;
+  margin-right: 32px;
   margin-bottom: 24px;
   padding: 0;
 
@@ -34,13 +35,14 @@
 
 .example__stat-wrapper {
   display: flex;
-  margin-bottom: 36px;
+  margin-bottom: 35px;
 }
 
 .example__statistics {
   margin: 0;
-  margin-right: 30px;
-  padding: 14px 42px;
+  margin-left: 20px;
+  margin-right: 32px;
+  padding: 14.4px 41.1px;
 
   color: #111111;
   font-size: 24px;
@@ -53,15 +55,17 @@
   border-radius: 2px;
 
   &:nth-of-type(2) {
-    padding: 14px 21px;
+    padding: 14.4px 21px;
+    margin-left: 0;
+    margin-right: 20px;
   }
 }
 
 .example__characteristic {
   position: absolute;
 
-  top: 269px;
-  right: 59px;
+  top: 268px;
+  right: 39px;
 
   width: 87px;
   height: 22px;
@@ -75,15 +79,16 @@
   background-color: @bg-lightgrey;
 
   &:nth-of-type(2) {
-    top: 269px;
-    left: 58px;
+    top: 268px;
+    left: 40px;
+    width: 85px;
   }
 }
 
 .example__cost {
   padding: 0;
-  margin-left: 47px;
-  margin-bottom: 33px;
+  margin-left: 67px;
+  margin-bottom: 34px;
   color: #111111;
   font-size: 14px;
   font-weight: 400;
@@ -98,7 +103,9 @@
 
 .example__image {
   width: 311px;
-  min-height: 232px;
+  height: 232px;
+
+  margin-bottom: 20px;
 
   background-image: url("../img/before-mobile@1x.png");
   background-repeat: no-repeat;
@@ -107,23 +114,117 @@
 }
 
 .example__range {
-  margin: 0;
-  padding: 0;
-
+  margin-left: 64px;
+  margin-bottom: 18px;
   color: #111111;
   font-size: 16px;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 58px;
   text-transform: uppercase;
+}
+
+.range {
+  width: 84px;
+  height: 14px;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+  background-color: #ffffff;
 }
 
 @media (min-width: @tablet-width) {
   .example {
-    width: 708px;
+    width: @tablet-width;
     background-color: #ffffff;
+    padding: 0;
+  }
+
+  .example__title {
+    margin: 0;
+    margin-left: 30px;
+    margin-bottom: 40px;
+    padding: 0;
+    padding-bottom: 23px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .example__description {
+    margin: 0;
+    margin-left: 30px;
+    margin-right: 32px;
+    margin-bottom: 54px;
+    padding: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.1px;
+  }
+
+  .example__stat-wrapper {
+    margin-bottom: 256px;
+  }
+
+  .example__statistics {
+    margin: 0;
+    margin-left: 30px;
+    margin-right: 42px;
+    padding: 16px 56.2px;
+
+    font-size: 30px;
+    line-height: 37px;
+    border: 1px solid #cdcdcd;
+    border-radius: 2px;
+
+    &:nth-of-type(2) {
+      padding: 16px 29.2px;
+      margin-left: 0;
+      margin-right: 20px;
+    }
+  }
+
+  .example__characteristic {
+    position: absolute;
+
+    top: 298px;
+    left: 248px;
+
+    width: 135px;
+    height: 22px;
+
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #ffffff;
+
+    &:nth-of-type(2) {
+      top: 298px;
+      left: 57px;
+      width: 107px;
+    }
+  }
+
+  .example__cost {
+    position: absolute;
+    top: 258px;
+    right: 30px;
+    width: 175px;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  .example__image-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: @bg-lightgrey; /* Два разных цвета фона и две кошки */
   }
 
   .example__image {
+    position: absolute;
+    top: 408px;
+    left: 46px;
     margin: 0 auto;
     width: 677px;
     min-height: 499px;
@@ -131,54 +232,111 @@
     background-image: url("../img/before-tablet@1x.png");
     background-repeat: no-repeat;
     background-position: 0 0;
-  }
-
-  .example__image-wrapper {
-    background-color: @bg-lightgrey; /* Два разных цвета фона и две кошки */
-  }
-
-  .example__title {
-    font-size: 60px;
-    line-height: 60px;
-  }
-
-  .example__description {
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  .example__statistics {
-    font-size: 30px;
-    line-height: 37px;
-  }
-
-  .example__characteristic {
-    font-size: 14px;
-    line-height: 14px;
-  }
-
-  .example__cost {
-    font-size: 20px;
-    line-height: 20px;
+    background-color: transparent;
   }
 
   .example__range {
     font-size: 20px;
     line-height: 20px;
+
+    border-bottom: 1px dotted #cdcdcd;
+    padding-bottom: 5px;
+    margin-top: 368px;
+    margin-left: 99px;
+    margin-bottom: 69px;
+
+    &:hover {
+      border-bottom: 1px solid #444444;
+    }
+
+    &:active {
+      border: none;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .example {
-    width: 1220px;
-    background-color: @bg-lightgrey;
+    width: @desktop-width;
   }
 
   .example__title {
     background-color: #ffffff;
+
+    margin-left: 40px;
+    margin-bottom: 52px;
+  }
+
+  .example__description {
+    margin: 0;
+    margin-left: 40px;
+    margin-top: 70px;
+    margin-bottom: 69px;
+    padding: 0;
+
+    width: 435px;
+  }
+
+  .example__stat-wrapper {
+    margin-bottom: 58px;
+  }
+
+  .example__statistics {
+    margin: 0;
+    margin-left: 40px;
+    margin-right: 42px;
+    padding: 16px 56.2px;
+
+    font-size: 30px;
+    line-height: 37px;
+    border: 1px solid #cdcdcd;
+    border-radius: 2px;
+
+    &:nth-of-type(2) {
+      padding: 16px 29.2px;
+      margin-left: 0;
+      margin-right: 20px;
+    }
+  }
+
+  .example__characteristic {
+    position: absolute;
+
+    top: 420px;
+    left: 258px;
+
+    width: 135px;
+    height: 22px;
+    background-color: @bg-lightgrey;
+
+    &:nth-of-type(2) {
+      top: 420px;
+      left: 67px;
+      width: 107px;
+    }
+  }
+
+  .example__cost {
+    position: static;
+    width: 330px;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    margin-left: 40px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .example__image-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: @bg-lightgrey; /* Два разных цвета фона и две кошки */
   }
 
   .example__image {
+    position: absolute;
+    top: -54px;
+    right: -551px;
     width: 677px;
     min-height: 499px;
 
@@ -187,8 +345,29 @@
     background-position: 0 0;
   }
 
+  .example__range {
+    font-size: 20px;
+    line-height: 20px;
+
+    border-bottom: 1px dotted #cdcdcd;
+    padding-bottom: 5px;
+    margin-top: 0;
+    margin-left: 500px;
+    margin-bottom: 69px;
+
+    &:hover {
+      border-bottom: 1px solid #444444;
+    }
+
+    &:active {
+      border: none;
+    }
+  }
+
   .example-wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    background-color: @bg-lightgrey;
   }
 }
