@@ -278,7 +278,7 @@
   }
 
   .example__stat-wrapper {
-    margin-bottom: 58px;
+    margin-bottom: 60px;
   }
 
   .example__statistics {
@@ -323,37 +323,43 @@
     padding: 0;
     margin: 0;
     margin-left: 40px;
+    margin-bottom: 76px;
     font-size: 20px;
     line-height: 20px;
   }
 
+  .example__spacing {
+    padding-left: 60px;
+  }
+
   .example__image-wrapper {
-    display: flex;
-    flex-direction: column;
     background-color: @bg-lightgrey; /* Два разных цвета фона и две кошки */
   }
 
   .example__image {
     position: absolute;
-    top: -54px;
+    top: -51px;
     right: -551px;
     width: 677px;
     min-height: 499px;
 
     background-image: url("../img/before-desktop@1x.png");
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: 0 -5px;
   }
 
   .example__range {
+    position: absolute;
+    top: 502px;
+    right: 508px;
+
     font-size: 20px;
     line-height: 20px;
 
     border-bottom: 1px dotted #cdcdcd;
     padding-bottom: 5px;
     margin-top: 0;
-    margin-left: 500px;
-    margin-bottom: 69px;
+
 
     &:hover {
       border-bottom: 1px solid #444444;
@@ -367,7 +373,6 @@
   .example-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     background-color: @bg-lightgrey;
   }
 }

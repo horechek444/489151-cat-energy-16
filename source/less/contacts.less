@@ -10,6 +10,7 @@
 
 .contacts__title {
   margin: 0;
+  margin-right: 19px;
   padding: 0;
 
   color: #111111;
@@ -33,6 +34,15 @@
 .contacts-wrapper {
   display: flex;
   padding: 0;
+  margin-top: 29px;
+  margin-left: 19px;
+  margin-right: 23px;
+  margin-bottom: 25px;
+}
+
+.description-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .contacts__map-image {
@@ -42,7 +52,7 @@
 
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: 0 -38px;
 }
 
 @media (min-width: @tablet-width) {
@@ -53,15 +63,26 @@
   .contacts__title {
     font-size: 20px;
     line-height: 25px;
+    margin-right: 318px;
   }
 
   .contacts__description {
     font-size: 16px;
     line-height: 20px;
+    text-align: right;
+    margin-bottom: 20px;
+
+    &:nth-of-type(2) {
+      margin-bottom: 0;
+    }
   }
 
   .contacts-wrapper {
     justify-content: space-between;
+    margin-top: 63px;
+    margin-left: 71px;
+    margin-right: 72px;
+    margin-bottom: 57px;
   }
 
   .contacts__map-image {
@@ -71,7 +92,7 @@
 
     background-image: url("../img/bg-map-tablet@1x.png");
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: 0 -4px;
   }
 }
 
@@ -83,8 +104,8 @@
 
   .contacts-wrapper {
     position: absolute;
-    top: 95px;
-    left: 110px;
+    top: 32px;
+    left: -31px;
 
     width: 570px;
     height: 201px;
@@ -93,14 +114,32 @@
     z-index: 10;
   }
 
+  .contacts__title {
+    margin-top: 65px;
+    margin-left: 75px;
+    margin-right: 60px;
+  }
+
+  .contacts__description {
+    margin-top: 63px;
+    margin-right: 90px;
+    text-align: left;
+    margin-bottom: 20px;
+
+    &:nth-of-type(2) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
   .contacts__map-image {
     margin: 0 auto;
-    width: 1440px;
+    width: @desktop-width;
     min-height: 399px;
 
     background-image: url("../img/bg-map-desktop@1x.png");
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: -70px 0;
     z-index: 1;
   }
 }
