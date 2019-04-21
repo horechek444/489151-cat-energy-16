@@ -43,7 +43,6 @@
       <h1 class="visually-hidden">Питание «Cat energy» для корректировки веса вашего питомца</h1>
 
       <section class="program-selection">
-        <div class="page-wrapper">
 
         <h2 class="program-selection__main-title">Подбор программы</h2>
         <p class="program-selection__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
@@ -53,7 +52,7 @@
               <legend class="visually-hidden"><h3>Анкета:</h3></legend>
               <div class="program-selection__box">
                 <p>
-                  <label class="program-selection__label" for="login">Имя:*</label>
+                  <label class="program-selection__label" for="login">Имя:* </label>
                   <input class="program-selection__user" id="login" type="text" name="login" placeholder="Барсик" required>
                 </p>
                 <p>
@@ -72,16 +71,16 @@
             <fieldset class="program-selection__wrapper">
               <legend class="visually-hidden"><h3>Выбор типа корректировки веса:</h3></legend>
               <ul class="program-selection__list program-selection__border">
-                <li class="program-selection__item">
-                  <input class="visually-hidden" id="filter__slim" type="radio" name="final-result" value="slim" checked>
+                <li class="program-selection__item checkbox__item">
+                  <input class="visually-hidden filter-checkbox" id="filter__slim" type="radio" name="final-result" value="slim" checked>
                   <label class="program-selection__label" for="filter__slim">Похудение</label>
                 </li>
-                <li class="program-selection__item">
-                  <input class="visually-hidden" id="filter__weight-gain"  type="radio" name="final-result" value="weight-gain">
+                <li class="program-selection__item checkbox__item">
+                  <input class="visually-hidden filter-checkbox" id="filter__weight-gain"  type="radio" name="final-result" value="weight-gain">
                   <label class="program-selection__label" for="filter__weight-gain">Набор массы</label>
                 </li>
-                <li class="program-selection__item">
-                  <input class="visually-hidden" id="filter__unknown"  type="radio" name="final-result" value="unknown">
+                <li class="program-selection__item checkbox__item">
+                  <input class="visually-hidden filter-checkbox" id="filter__unknown"  type="radio" name="final-result" value="unknown">
                   <label class="program-selection__label" for="filter__unknown">Не знаю (нужен ваш совет)</label>
                 </li>
               </ul>
@@ -90,8 +89,8 @@
         </div>
 
         <form action="https://echo.htmlacademy.ru" method="get">
-          <fieldset class="program-selection__wrapper">
-            <legend class="program-selection__legend">Контактные данные (владельца кота)</legend>
+          <fieldset class="program-selection__wrapper email__wrapper">
+            <legend class="program-selection__legend legend-contact">Контактные данные (владельца кота)</legend>
             <div class="program-selection__case">
             <p>
               <label class="program-selection__label" for="email">E-mail:*</label>
@@ -99,7 +98,7 @@
             </p>
             <p>
               <label class="program-selection__label" for="phone">Телефон:*</label>
-              <input class="program-selection__user" id="phone" type="tel" name="phone" placeholder="8(960)900-60-90" required>
+              <input class="program-selection__user" id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
             </p>
             </div>
           </fieldset>
@@ -107,14 +106,14 @@
 
         <form action="https://echo.htmlacademy.ru" method="get">
           <div>
-            <label class="program-selection__legend" for="comment__text">Комментарий</label>
+            <label class="program-selection__legend legend-comment" for="comment__text">Комментарий</label>
             <textarea class="program-selection__user" id="comment__text" name="comment" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </form>
 
         <form action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="program-selection__wrapper">
-            <legend class="program-selection__legend">Дополнительно:</legend>
+            <legend class="program-selection__legend legend-optionally">Дополнительно:</legend>
             <ul class="program-selection__list program-selection__optionally">
               <li class="program-selection__item">
                 <input class="visually-hidden" id="filter__sweetener" type="checkbox" name="sweetener" checked>
@@ -136,15 +135,17 @@
           </fieldset>
         </form>
 
-        <button class="program-selection__button button" type="submit">Отправить</button>
+        <button class="program-selection__button button" type="submit">Отправить заявку</button>
         <p class="program-selection__necessary">* - Обязательные поля</p>
-        </div>
       </section>
 
-      <section class="contacts">
+      <section class="contacts contacts__color">
         <div class="contacts-wrapper">
-          <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
-          <p class="contacts__description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <h3 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
+          <div class="description-wrapper">
+            <p class="contacts__description">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8</p>
+            <p class="contacts__description">Санкт-Петербург</p>
+          </div>
         </div>
         <a class="contacts__map map" href="https://yandex.ru/map-widget/v1/-/CBe~eIQtXA" title="Карта">
           <div class="contacts__map-image"></div>
