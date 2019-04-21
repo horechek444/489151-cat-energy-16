@@ -3,27 +3,43 @@
   margin: 0 auto;
   width: 320px;
   background-color: #ffffff;
+  padding-top: 28px;
 }
 
 .optional-goods__main-title {
+  position: relative;
   margin: 0;
+  margin-left: 19px;
+  margin-bottom: 34px;
   padding: 0;
 
   color: #111111;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 14px;
+    right: 0;
+
+    width: 53px;
+    height: 3px;
+    background-color: #68b738;
+  }
 }
 
 .optional-goods__list {
   display: flex;
   flex-direction: column;
   .list-reset();
-  margin-bottom: 400px; /* пока чтобы картинка с котом не наезжала на карту */
+  min-width: 280px;
+  margin-bottom: 363px;
 }
 
 .optional-goods__item {
-  margin-bottom: 20px;
   border-top: 1px solid #cdcdcd;
 }
 
@@ -32,6 +48,9 @@
 }
 
 .optional-goods__title {
+  margin-top: 13px;
+  margin-left: 20px;
+  margin-bottom: 13px;
   color: #222222;
   font-size: 16px;
   font-weight: 400;
@@ -39,8 +58,13 @@
   text-transform: uppercase;
 }
 
+.optional__property {
+  display: flex;
+}
+
 .optional-goods__property {
   margin: 0;
+  margin-left: 20px;
   padding: 0;
 
   color: #444444;
@@ -48,24 +72,53 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
+  letter-spacing: -0.1px;
+}
+
+.optional-goods__item:nth-child(1) .optional-goods__property:nth-of-type(2) {
+  margin-right: 20px;
+  margin-left: 123px;
+}
+
+.optional-goods__item:nth-child(2) .optional-goods__property:nth-of-type(2) {
+  margin-right: 20px;
+  margin-left: 190px;
+}
+
+.optional-goods__item:nth-child(3) .optional-goods__property:nth-of-type(2) {
+  margin-right: 20px;
+  margin-left: 198px;
+}
+
+.optional-goods__item:nth-child(4) .optional-goods__property:nth-of-type(2) {
+  margin-right: 20px;
+  margin-left: 130px;
 }
 
 .optional-goods__description {
+  margin-top: 187px;
+  margin-left: 59px;
+
+  width: 165px;
   color: #ffffff;
   font-family: "Arial MT", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
+  text-align: center;
 }
 
 .optional-goods__order {
-  padding: 12px 109px;
-  margin-top: 14px;
+  padding: 10px 109px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 15px;
+  margin-bottom: 17px;
 }
 
 .optional-goods__image {
   position: absolute;
-  top: 550px;
+  top: 642px;
   left: 20px;
 
   width: 280px;
@@ -79,43 +132,121 @@
 @media (min-width: @tablet-width) {
   .optional-goods {
     width: @tablet-width;
+    padding-top: 0;
   }
 
   .optional-goods__main-title {
+    position: relative;
+    margin: 0;
+    margin-left: 67px;
+    margin-bottom: 80px;
+    padding: 0;
+
     font-size: 36px;
     line-height: 36px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 21px;
+      left: -67px;
+
+      width: 28px;
+      height: 3px;
+      background-color: #68b738;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 21px;
+      right: 0;
+
+      width: 327px;
+      height: 3px;
+      background-color: #68b738;
+    }
+  }
+
+  .optional-goods__list {
+    min-width: 708px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 345px;
   }
 
   .optional-goods__title {
+    margin-top: 26px;
+    margin-left: 39px;
+    margin-bottom: 0;
     font-size: 20px;
     line-height: 20px;
   }
 
+  .optional__property {
+    display: flex;
+  }
+
   .optional-goods__property {
+    margin: 0;
+    margin-top: 29px;
+    padding: 0;
+
     font-size: 16px;
     line-height: 20px;
   }
 
-  .optional-goods__list {
-    width: 708px;
-    margin-bottom: 250px; /* пока чтобы картинка с котом не наезжала на карту */
+  .optional-goods__item:nth-child(1) .optional-goods__property:nth-of-type(2) {
+    margin-right: 37px;
+    margin-left: 50px;
+  }
+
+  .optional-goods__item:nth-child(2) .optional-goods__property:nth-of-type(2) {
+    margin-right: 37px;
+    margin-left: 60px;
+  }
+
+  .optional-goods__item:nth-child(3) .optional-goods__property:nth-of-type(2) {
+    margin-right: 37px;
+    margin-left: 50px;
+  }
+
+  .optional-goods__item:nth-child(4) .optional-goods__property:nth-of-type(2) {
+    margin-right: 37px;
+    margin-left: 50px;
+  }
+
+  .optional-wrapper {
+    display: flex;
+    justify-content: space-between;
   }
 
   .optional-goods__item {
     border: 1px solid #cdcdcd;
     border-bottom: none;
     margin: 0;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 
   .optional-goods__order {
-    padding: 12px 286px;
-    margin: 26px 37px;
+    padding: 10px 286px;
+    margin: 22px 37px;
+    margin-bottom: 27px;
+  }
+
+  .optional-goods__description {
+    margin-top: 73px;
+    margin-left: 424px;
+    text-align: left;
   }
 
   .optional-goods__image {
     position: absolute;
-    top: 700px;
-    left: 0;
+    top: 742px;
+    left: 30px;
 
     width: 708px;
     height: 200px;
@@ -128,25 +259,136 @@
 
 @media (min-width: @desktop-width) {
   .optional-goods {
-    width: 1220px;
+    width: @desktop-width;
   }
+
+  .optional-goods__main-title {
+    position: relative;
+    margin: 0;
+    margin-bottom: 79px;
+    margin-left: 40px;
+    padding: 0;
+
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      content: none;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 21px;
+      right: 0;
+
+      width: 888px;
+      height: 3px;
+      background-color: #68b738;
+    }
+  }
+
+  .optional-goods__list {
+    min-width: 896px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 86px;
+  }
+
+  .optional-goods__title {
+    margin-top: 26px;
+    margin-left: 10px;
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .optional__property {
+    display: flex;
+  }
+
+  .optional-goods__property {
+    margin: 0;
+    margin-top: 29px;
+    padding: 0;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .optional-goods__item:nth-child(1) .optional-goods__property:nth-of-type(1) {
+    margin-right: 60px;
+    margin-left: 165px;
+  }
+
+  .optional-goods__item:nth-child(1) .optional-goods__property:nth-of-type(2) {
+    margin-right: 35px;
+    margin-left: 50px;
+  }
+
+  .optional-goods__item:nth-child(2) .optional-goods__property:nth-of-type(1) {
+    margin-right: 128px;
+    margin-left: 197px;
+  }
+
+  .optional-goods__item:nth-child(2) .optional-goods__property:nth-of-type(2) {
+    margin-right: 35px;
+    margin-left: 60px;
+  }
+
+  .optional-goods__item:nth-child(3) .optional-goods__property:nth-of-type(1) {
+    margin-right: 146px;
+    margin-left: 259px;
+  }
+
+  .optional-goods__item:nth-child(3) .optional-goods__property:nth-of-type(2) {
+    margin-right: 35px;
+    margin-left: 50px;
+  }
+
+  .optional-goods__item:nth-child(4) .optional-goods__property:nth-of-type(1) {
+    margin-right: 69px;
+    margin-left: 237px;
+  }
+
+  .optional-goods__item:nth-child(4) .optional-goods__property:nth-of-type(2) {
+    margin-right: 35px;
+    margin-left: 50px;
+  }
+
+  .optional-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
 
   .optional-goods__item {
     display: flex;
     border: none;
     border-top: 1px solid #cdcdcd;
+    width: 910px;
   }
 
   .optional-goods__order {
-    padding: 12px 92px;
-    margin: 27px 37px;
-    margin-top: 26px;
+    padding: 10px 92px;
+    margin-top: 15px;
+    margin-bottom: 16px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .optional-goods__description {
+    margin-top: 188px;
+    margin-left: 43px;
+    padding: 0;
+    text-align: center;
   }
 
   .optional-goods__image {
     position: absolute;
-    top: 91px;
-    left: 1000px;
+    top: 115px;
+    left: 1015px;
 
     width: 245px;
     height: 289px;
@@ -154,9 +396,5 @@
     background-image: url("../img/gift-photo-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
-  }
-
-  .optional-goods__list {
-    margin-bottom: 30px; /* временно */
   }
 }
