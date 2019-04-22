@@ -112,7 +112,7 @@
 
 @media (min-width: @tablet-width) {
   .main-nav {
-    width: @tablet-width;
+    width: 467px;
     margin: 0;
     font-size: 18px;
     line-height: 25px;
@@ -134,36 +134,30 @@
   .main-nav__list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 43px; /* 47 */
-    margin-left: 82px;
-    width: 450px;
+    justify-content: space-between;
+    margin-top: 43px;
+    width: 467px;
   }
 
-  .main-nav__item {
-    &:first-child {
-      margin-right: 34px;
-    }
+  .main-nav__item:last-child {
+    margin-right: 28px;
+  }
 
-    &:nth-child(2) {
-      margin-right: 37px;
-    }
+  .main-nav__item--active {
+    position: relative;
+  }
 
-    &--active {
-      position: relative;
+  .main-nav__item--active::after {
+    content: "";
 
-      &::after {
-        content: "";
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+    left: 0;
 
-        position: absolute;
-        right: 0;
-        bottom: -8px;
-        left: 0;
+    height: 2px;
 
-        height: 2px;
-
-        background: @bg-ligthgreen;
-      }
-    }
+    background: @bg-ligthgreen;
   }
 
   .main-nav__item a[href] {
@@ -179,45 +173,40 @@
 
 @media (min-width: @desktop-width) {
   .main-nav {
-    width: @desktop-width;
+    width: 517px;
     font-size: 20px;
     line-height: 25px;
   }
 
   .main-nav__list {
     margin-top: 74px;
-    margin-left: 536px;
-    width: 485px;
+    width: 517px;
   }
 
   .main-nav__item {
     letter-spacing: -0.1px;
     z-index: 20;
+  }
 
-    &:first-child {
-      margin-right: 37px;
-    }
+  .main-nav__item:last-child {
+    margin-right: 40px;
+  }
 
-    &:nth-child(2) {
-      margin-right: 34px;
-    }
+  .main-nav__item--active {
+    position: relative;
+  }
 
-    &--active {
-      position: relative;
+  .main-nav__item--active::after {
+    content: "";
 
-      &::after {
-        content: "";
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+    left: 0;
 
-        position: absolute;
-        right: 0;
-        bottom: -8px;
-        left: 0;
+    height: 2px;
 
-        height: 2px;
-
-        background-color: #68b738;
-      }
-    }
+    background-color: #68b738;
   }
 
   .main-nav__item a {
@@ -227,14 +216,6 @@
   .main-nav__item-index {
     letter-spacing: -0.1px;
     z-index: 20;
-
-    &:first-child {
-      margin-right: 37px;
-    }
-
-    &:nth-child(2) {
-      margin-right: 34px;
-    }
   }
 
   .main-nav__item-index--active {
