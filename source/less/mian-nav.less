@@ -28,7 +28,7 @@
   width: 24px;
   height: 18px;
 
-  background-color: #ffffff;
+  background-color: @bg-white;
 
   cursor: pointer;
   border: none;
@@ -44,8 +44,8 @@
   width: 24px;
   height: 2px;
 
-  background-color: #222222;
-  box-shadow: 0 8px 0 0 #222222, 0 16px 0 0 #222222;
+  background-color: @bg-blackbrown;
+  box-shadow: 0 8px 0 0 @bg-blackbrown, 0 16px 0 0 @bg-blackbrown;
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -64,7 +64,7 @@
     width: 25px;
     height: 2px;
 
-    background-color: #222222;
+    background-color: @bg-blackbrown;
   }
 
   &::before {
@@ -81,19 +81,13 @@
   display: block;
   padding-top: 23px;
   padding-bottom: 22px;
-  color: #111111;
-  border-bottom: 1px solid #ededed;
+  color: @bg-almostblack;
+  border-bottom: 1px solid @bg-blackbrown;
 }
 
 @media (max-width: @mobile-width-only) {
   .main-nav--closed .main-nav__item {
     display: none;
-  }
-
-  .main-nav--opened {  /* сделать чтобы всё меню поднялось вверх либо остальное съехало вниз */
-    min-height: 15vh; /* хватит ли */
-
-    background-color: #ffffff;
   }
 
   .main-nav--nojs .main-nav__toggle {
@@ -127,7 +121,7 @@
     display: block;
     padding-top: 0;
     padding-bottom: 0;
-    color: #222222;
+    color: @bg-blackbrown;
     border: none;
   }
 
@@ -206,11 +200,11 @@
 
     height: 2px;
 
-    background-color: #68b738;
+    background-color: @bg-blackbrown;
   }
 
   .main-nav__item a {
-    color: #111111;
+    color: @bg-almostblack;
   }
 
   .main-nav__item-index {
@@ -232,10 +226,10 @@
 
     height: 2px;
 
-    background-color: #ffffff;
+    background-color: @bg-white;
   }
 
   .main-nav__item-index a {
-    color: #ffffff;
+    color: @bg-white;
   }
 }

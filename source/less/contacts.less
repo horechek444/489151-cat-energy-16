@@ -1,7 +1,7 @@
 .contacts {
   margin: 0 auto;
   width: 320px;
-  background-color: #ffffff;
+  background-color: @bg-white;
   padding-top: 0.1px;
 }
 
@@ -10,11 +10,12 @@
 }
 
 .contacts__title {
+  display: block;
   margin: 0;
-  margin-right: 19px;
+  width: 125px;
   padding: 0;
 
-  color: #111111;
+  color: @bg-almostblack;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -25,7 +26,7 @@
   margin: 0;
   padding: 0;
 
-  color: #444444;
+  color: @bg-bluishblack;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -34,11 +35,10 @@
 
 .contacts-wrapper {
   display: flex;
-  padding: 0;
-  margin-top: 29px;
-  margin-left: 19px;
-  margin-right: 23px;
-  margin-bottom: 25px;
+  justify-content: space-evenly;
+  padding-top: 28px;
+  padding-bottom: 25px;
+  width: 320px;
 }
 
 .contacts-wrapper__color {
@@ -48,6 +48,7 @@
 .description-wrapper {
   display: flex;
   flex-direction: column;
+  width: 139px;
 }
 
 .contacts__map-image {
@@ -68,26 +69,29 @@
   .contacts__title {
     font-size: 20px;
     line-height: 25px;
-    margin-right: 318px;
+    width: 154px;
   }
 
   .contacts__description {
     font-size: 16px;
     line-height: 20px;
     text-align: right;
-    margin-bottom: 20px;
-
-    &:nth-of-type(2) {
-      margin-bottom: 0;
-    }
   }
 
   .contacts-wrapper {
+    margin: 0 auto;
+    display: flex;
     justify-content: space-between;
-    margin-top: 64px;
-    margin-left: 71px;
-    margin-right: 72px;
-    margin-bottom: 57px;
+    padding-top: 63px;
+    padding-bottom: 60px;
+    width: 625px;
+  }
+
+  .description-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 154px;
   }
 
   .contacts__map-image {
@@ -107,27 +111,27 @@
     width: @desktop-width;
   }
 
-  .contacts-wrapper {
+  .contacts-place {
     position: absolute;
-    top: 32px;
-    left: -31px;
+    top: 95px;
+    left: 40px;
 
     width: 570px;
     height: 201px;
 
-    background-color: #ffffff;
+    background-color: @bg-white;
     z-index: 10;
   }
 
-  .contacts__title {
-    margin-top: 65px;
-    margin-left: 75px;
-    margin-right: 60px;
+  .contacts-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 63px;
+    padding-bottom: 60px;
+    width: 410px;
   }
 
   .contacts__description {
-    margin-top: 63px;
-    margin-right: 90px;
     text-align: left;
     margin-bottom: 20px;
 
