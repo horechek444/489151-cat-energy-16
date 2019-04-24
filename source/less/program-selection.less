@@ -104,7 +104,7 @@ input[name="phone"] {
   margin-bottom: 28px;
 }
 
-.checkbox__item label {
+.radio__item label {
   position: relative;
 
   display: block;
@@ -114,7 +114,7 @@ input[name="phone"] {
   margin-bottom: 24.5px;
 }
 
-.filter-checkbox + label::before {
+.filter-radio + label::before {
   content: "";
 
   position: absolute;
@@ -124,11 +124,11 @@ input[name="phone"] {
   width: 29px;
   height: 29px;
 
-  border: 1px solid #cdcdcd;
+  border: 1px solid @bg-darkgrey;
   border-radius: 50%;
 }
 
-.filter-checkbox:checked + label::after {
+.filter-radio:checked + label::after {
   content: "";
 
   position: absolute;
@@ -142,23 +142,23 @@ input[name="phone"] {
   border-radius: 50%;
 }
 
-.filter-checkbox:disabled + label {
+.filter-radio:disabled + label {
   opacity: 0.3;
 }
 
-.filter-checkbox:hover + label::before,
-.filter-checkbox:focus + label::before {
+.filter-radio:hover + label::before,
+.filter-radio:focus + label::before {
   border-color: #bababa;
 }
 
-.filter-checkbox:disabled + label::before {
+.filter-radio:disabled + label::before {
   border-color: #bababa;
   opacity: 0.3;
 
   cursor: not-allowed;
 }
 
-.filter-checkbox:checked:disabled + label::after {
+.filter-radio:checked:disabled + label::after {
   opacity: 0.3;
 
   cursor: not-allowed;
@@ -222,6 +222,7 @@ input[name="phone"] {
   top: 14px;
   right: -115px;
 }
+
 .program-selection__optionally {
   .list-reset();
   display: flex;
@@ -232,9 +233,42 @@ input[name="phone"] {
   margin-bottom: 42px;
 }
 
-//.optionally__item {
-//  margin-bottom: 26px;
-//}
+.checkbox__item label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-checkbox + label::before {
+  content: "";
+
+  position: absolute;
+  left: -46px;
+  top: -4px;
+
+  width: 28px;
+  height: 28px;
+
+  border: 1px solid @bg-darkgrey;
+}
+
+.filter-checkbox:checked + label::after {
+  content: "";
+
+  position: absolute;
+  left: -41px;
+  top: 3px;
+
+  width: 21px;
+  height: 16px;
+
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
 
 .program-selection__button {
   font-size: 16px;
@@ -242,6 +276,7 @@ input[name="phone"] {
   line-height: 20px;
   padding: 11px 78px;
   margin-left: 19px;
+  margin-bottom: 20px;
 }
 
 .program-selection__necessary {
@@ -249,7 +284,9 @@ input[name="phone"] {
   font-family: "Arial MT", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  line-height: 16px;
+  line-height: 15px;
+  margin-left: 84px;
+  margin-bottom: 30px;
 }
 
 @media (min-width: @tablet-width) {
