@@ -2,15 +2,15 @@
   position: relative;
   margin: 0 auto;
   padding-top: 18px;
-  width: 320px;
+  padding-left: 20px;
+  width: 300px;
   background-color: @bg-lightgrey;
 }
 
 .example__title {
   margin: 0;
-  margin-left: 20px;
   padding: 0;
-  padding-bottom: 23px;
+  margin-bottom: 23px;
 
   color: @bg-almostblack;
   font-size: 36px;
@@ -20,7 +20,6 @@
 
 .example__description {
   margin: 0;
-  margin-left: 20px;
   margin-right: 32px;
   margin-bottom: 24px;
   padding: 0;
@@ -40,9 +39,8 @@
 
 .example__statistics {
   margin: 0;
-  margin-left: 20px;
   margin-right: 32px;
-  padding: 14px 41px;
+  padding: 15px 41px;
 
   color: @bg-almostblack;
   font-size: 24px;
@@ -54,8 +52,8 @@
   border: 1px solid @bg-darkgrey;
   border-radius: 2px;
 
-  &:nth-of-type(2) {
-    padding: 14px 21px;
+  &:last-child {
+    padding: 15px 21px;
     margin-left: 0;
     margin-right: 20px;
   }
@@ -64,12 +62,6 @@
 .example__characteristic {
   position: absolute;
 
-  top: 268px;
-  right: 39px;
-
-  width: 87px;
-  height: 22px;
-
   color: @bg-bluishblack;
   font-family: "Arial MT", sans-serif;
   font-size: 12px;
@@ -77,18 +69,24 @@
   text-align: center;
   line-height: 12px;
   background-color: @bg-lightgrey;
+}
 
-  &:nth-of-type(2) {
-    top: 268px;
-    left: 40px;
-    width: 85px;
-  }
+.example-weight {
+  top: 268px;
+  left: 40px;
+  width: 85px;
+}
+
+.example-time {
+  top: 268px;
+  right: 39px;
+  width: 87px;
+  height: 22px;
 }
 
 .example__cost {
   padding: 0;
-  margin-left: 67px;
-  margin-bottom: 34px;
+  margin-left: 47px;
   color: @bg-almostblack;
   font-size: 14px;
   font-weight: 400;
@@ -97,29 +95,40 @@
 }
 
 .example__image-wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+
+  height: 348px;
 }
 
 .example__image {
+  position: absolute;
+  top: 20px;
+  left: -20px;
+
   width: 311px;
   height: 232px;
 
-  margin-bottom: 20px;
+  margin-bottom: 41px;
 
   background-image: url("../img/before-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-color: @bg-lightgrey;
+}
+
+.example__range-wrapper {
+  margin: 0 auto;
+  padding-top: 38px;
+  padding-bottom: 36px;
 }
 
 .example__range {
-  margin-left: 64px;
-  margin-bottom: 18px;
   color: @bg-almostblack;
   font-size: 16px;
   font-weight: 400;
-  line-height: 58px;
+  line-height: 20px;
   text-transform: uppercase;
 }
 
@@ -138,9 +147,15 @@
     padding: 0;
   }
 
+  .example-wrapper {
+    width: 708px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
   .example__title {
     margin: 0;
-    margin-left: 30px;
+    margin-left: 30px; /* не могу центровать паддингами, потому что потом будет блок на всю страницу шириной и тоже будет центроваться */
     margin-bottom: 40px;
     padding: 0;
     padding-bottom: 23px;
@@ -151,8 +166,6 @@
 
   .example__description {
     margin: 0;
-    margin-left: 30px;
-    margin-right: 32px;
     margin-bottom: 54px;
     padding: 0;
 
@@ -167,40 +180,39 @@
 
   .example__statistics {
     margin: 0;
-    margin-left: 30px;
     margin-right: 42px;
-    padding: 16px 56.2px;
+    padding: 16px 56px;
 
     font-size: 30px;
     line-height: 37px;
     border: 1px solid @bg-darkgrey;
     border-radius: 2px;
 
-    &:nth-of-type(2) {
-      padding: 16px 29.2px;
-      margin-left: 0;
-      margin-right: 20px;
+    &:last-of-type {
+      padding: 16px 29px;
+      margin: 0;
     }
   }
 
   .example__characteristic {
     position: absolute;
 
-    top: 298px;
-    left: 248px;
-
-    width: 135px;
-    height: 22px;
-
     font-size: 14px;
     line-height: 14px;
     background-color: @bg-white;
+  }
 
-    &:nth-of-type(2) {
-      top: 298px;
-      left: 57px;
-      width: 107px;
-    }
+  .example-weight {
+    top: 298px;
+    left: 57px;
+    width: 107px;
+  }
+
+  .example-time {
+    top: 298px;
+    left: 248px;
+    width: 135px;
+    height: 22px;
   }
 
   .example__cost {
@@ -216,23 +228,33 @@
   }
 
   .example__image-wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
-    background-color: @bg-lightgrey; /* Два разных цвета фона и две кошки */
+    justify-content: flex-end;
+    background-color: @bg-lightgrey;
+    margin: 0;
+
+    height: 462px;
   }
 
   .example__image {
     position: absolute;
-    top: 408px;
+    top: -170px;
     left: 46px;
-    margin: 0 auto;
     width: 677px;
-    min-height: 499px;
+    min-height: 505px;
 
     background-image: url("../img/before-tablet@1x.png");
     background-repeat: no-repeat;
     background-position: 0 0;
     background-color: transparent;
+  }
+
+  .example__range-wrapper {
+    margin: 0 auto;
+    padding-top: 5px;
+    padding-bottom: 75px;
   }
 
   .example__range {
@@ -241,9 +263,6 @@
 
     border-bottom: 1px dotted @bg-darkgrey;
     padding-bottom: 5px;
-    margin-top: 368px;
-    margin-left: 99px;
-    margin-bottom: 69px;
 
     &:hover {
       border-bottom: 1px solid @bg-bluishblack;
@@ -258,7 +277,20 @@
 @media (min-width: @desktop-width) {
   .example {
     width: @desktop-width;
-    padding-top: 0;
+    padding: 0;
+  }
+
+  .example-main-wrapper {
+    display: flex;
+  }
+
+  .example-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: @bg-lightgrey;
+    width: 550px;
+    padding-left: 40px;
+    padding-right: 0;
   }
 
   .example__title {
@@ -270,7 +302,6 @@
 
   .example__description {
     margin: 0;
-    margin-left: 40px;
     margin-top: 70px;
     margin-bottom: 69px;
     padding: 0;
@@ -284,17 +315,16 @@
 
   .example__statistics {
     margin: 0;
-    margin-left: 40px;
     margin-right: 42px;
-    padding: 16px 56.2px;
+    padding: 16px 56px;
 
     font-size: 30px;
     line-height: 37px;
     border: 1px solid @bg-darkgrey;
     border-radius: 2px;
 
-    &:nth-of-type(2) {
-      padding: 16px 29.2px;
+    &:last-of-type {
+      padding: 16px 29px;
       margin-left: 0;
       margin-right: 20px;
     }
@@ -302,19 +332,20 @@
 
   .example__characteristic {
     position: absolute;
+    background-color: @bg-lightgrey;
+  }
 
+  .example-weight {
+    top: 420px;
+    left: 67px;
+    width: 107px;
+  }
+
+  .example-time {
     top: 420px;
     left: 258px;
-
     width: 135px;
     height: 22px;
-    background-color: @bg-lightgrey;
-
-    &:nth-of-type(2) {
-      top: 420px;
-      left: 67px;
-      width: 107px;
-    }
   }
 
   .example__cost {
@@ -323,7 +354,6 @@
     text-align: left;
     padding: 0;
     margin: 0;
-    margin-left: 40px;
     margin-bottom: 76px;
     font-size: 20px;
     line-height: 20px;
@@ -334,26 +364,39 @@
   }
 
   .example__image-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     background-color: @bg-lightgrey; /* Два разных цвета фона и две кошки */
+    margin: 0;
+    width: 750px;
+
+    height: 462px;
   }
 
   .example__image {
     position: absolute;
-    top: -51px;
-    right: -551px;
+    top: -190px;
+    right: 0;
+    left: 37px;
+    bottom: 0;
+    margin: 0;
     width: 677px;
-    min-height: 499px;
+    min-height: 505px;
 
     background-image: url("../img/before-desktop@1x.png");
     background-repeat: no-repeat;
-    background-position: 0 -5px;
+    background-position: 0 0;
+  }
+
+  .example__range-wrapper {
+    margin: 0 auto;
+    padding-top: 5px;
+    padding-bottom: 68px;
   }
 
   .example__range {
-    position: absolute;
-    top: 502px;
-    right: 508px;
-
     font-size: 20px;
     line-height: 20px;
 
@@ -369,11 +412,5 @@
     &:active {
       border: none;
     }
-  }
-
-  .example-wrapper {
-    display: flex;
-    flex-direction: column;
-    background-color: @bg-lightgrey;
   }
 }
