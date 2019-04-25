@@ -1,15 +1,18 @@
 .example {
+  position: relative;
   margin: 0 auto;
-  width: 320px;
+  padding-top: 18px;
+  padding-left: 20px;
+  width: 300px;
   background-color: @bg-lightgrey;
 }
 
 .example__title {
   margin: 0;
   padding: 0;
-  padding-bottom: 33px;
+  margin-bottom: 23px;
 
-  color: #111111;
+  color: @bg-almostblack;
   font-size: 36px;
   font-weight: 400;
   line-height: 60px;
@@ -17,133 +20,397 @@
 
 .example__description {
   margin: 0;
-  margin-bottom: 27px;
+  margin-right: 32px;
+  margin-bottom: 24px;
   padding: 0;
 
-  color: #444444;
+  color: @bg-bluishblack;
   font-family: "Arial MT", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
+  letter-spacing: -0.1px;
+}
+
+.example__stat-wrapper {
+  display: flex;
+  margin-bottom: 35px;
 }
 
 .example__statistics {
-  color: #111111;
+  margin: 0;
+  margin-right: 32px;
+  padding: 15px 41px;
+
+  color: @bg-almostblack;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
+  text-align: center;
   text-transform: uppercase;
+
+  border: 1px solid @bg-darkgrey;
+  border-radius: 2px;
+
+  &:last-child {
+    padding: 15px 21px;
+    margin-left: 0;
+    margin-right: 20px;
+  }
 }
 
 .example__characteristic {
-  color: #444444;
+  position: absolute;
+
+  color: @bg-bluishblack;
   font-family: "Arial MT", sans-serif;
   font-size: 12px;
   font-weight: 400;
+  text-align: center;
   line-height: 12px;
+  background-color: @bg-lightgrey;
+}
+
+.example-weight {
+  top: 268px;
+  left: 40px;
+  width: 85px;
+}
+
+.example-time {
+  top: 268px;
+  right: 39px;
+  width: 87px;
+  height: 22px;
 }
 
 .example__cost {
-  color: #111111;
+  padding: 0;
+  margin-left: 47px;
+  color: @bg-almostblack;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
 }
 
+.example__image-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  height: 348px;
+}
+
 .example__image {
+  position: absolute;
+  top: 20px;
+  left: -20px;
+
   width: 311px;
-  min-height: 232px;
+  height: 232px;
+
+  margin-bottom: 41px;
 
   background-image: url("../img/before-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-color: #f2f2f2;
+}
+
+.example__range-wrapper {
+  margin: 0 auto;
+  padding-top: 38px;
+  padding-bottom: 36px;
 }
 
 .example__range {
-  margin: 0;
-  padding: 0;
-
-  color: #111111;
+  color: @bg-almostblack;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
 }
 
+.range {
+  width: 84px;
+  height: 14px;
+  border: 1px solid @bg-darkgrey;
+  border-radius: 6px;
+  background-color: @bg-white;
+}
+
 @media (min-width: @tablet-width) {
   .example {
+    width: @tablet-width;
+    background-color: @bg-white;
+    padding: 0;
+  }
+
+  .example-wrapper {
     width: 708px;
-    background-color: #ffffff;
-  }
-
-  .example__image {
-    margin: 0 auto;
-    width: 677px;
-    min-height: 499px;
-
-    background-image: url("../img/before-tablet@1x.png");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-  }
-
-  .example__image-wrapper {
-    background-color: @bg-lightgrey; /* Два разных цвета фона и две кошки */
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .example__title {
+    margin: 0;
+    margin-left: 30px; /* не могу центровать паддингами, потому что потом будет блок на всю страницу шириной и тоже будет центроваться */
+    margin-bottom: 40px;
+    padding: 0;
+    padding-bottom: 23px;
+
     font-size: 60px;
     line-height: 60px;
   }
 
   .example__description {
+    margin: 0;
+    margin-bottom: 54px;
+    padding: 0;
+
     font-size: 16px;
     line-height: 24px;
+    letter-spacing: -0.1px;
+  }
+
+  .example__stat-wrapper {
+    margin-bottom: 256px;
   }
 
   .example__statistics {
+    margin: 0;
+    margin-right: 42px;
+    padding: 16px 56px;
+
     font-size: 30px;
     line-height: 37px;
+    border: 1px solid @bg-darkgrey;
+    border-radius: 2px;
+
+    &:last-of-type {
+      padding: 16px 29px;
+      margin: 0;
+    }
   }
 
   .example__characteristic {
+    position: absolute;
+
     font-size: 14px;
     line-height: 14px;
+    background-color: @bg-white;
+  }
+
+  .example-weight {
+    top: 298px;
+    left: 57px;
+    width: 107px;
+  }
+
+  .example-time {
+    top: 298px;
+    left: 248px;
+    width: 135px;
+    height: 22px;
   }
 
   .example__cost {
+    position: absolute;
+    top: 258px;
+    right: 30px;
+    width: 175px;
+    text-align: right;
+    padding: 0;
+    margin: 0;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 27px;
+  }
+
+  .example__image-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: @bg-lightgrey;
+    margin: 0;
+
+    height: 462px;
+  }
+
+  .example__image {
+    position: absolute;
+    top: -170px;
+    left: 46px;
+    width: 677px;
+    min-height: 505px;
+
+    background-image: url("../img/before-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: transparent;
+  }
+
+  .example__range-wrapper {
+    margin: 0 auto;
+    padding-top: 5px;
+    padding-bottom: 75px;
   }
 
   .example__range {
     font-size: 20px;
     line-height: 20px;
+
+    border-bottom: 1px dotted @bg-darkgrey;
+    padding-bottom: 5px;
+
+    &:hover {
+      border-bottom: 1px solid @bg-bluishblack;
+    }
+
+    &:active {
+      border: none;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .example {
-    width: 1220px;
+    width: @desktop-width;
+    padding: 0;
+  }
+
+  .example-main-wrapper {
+    display: flex;
+  }
+
+  .example-wrapper {
+    display: flex;
+    flex-direction: column;
     background-color: @bg-lightgrey;
+    width: 550px;
+    padding-left: 40px;
+    padding-right: 0;
   }
 
   .example__title {
-    background-color: #ffffff;
+    background-color: @bg-white;
+
+    margin-left: 40px;
+    margin-bottom: 52px;
+  }
+
+  .example__description {
+    margin: 0;
+    margin-top: 70px;
+    margin-bottom: 69px;
+    padding: 0;
+
+    width: 435px;
+  }
+
+  .example__stat-wrapper {
+    margin-bottom: 60px;
+  }
+
+  .example__statistics {
+    margin: 0;
+    margin-right: 42px;
+    padding: 16px 56px;
+
+    font-size: 30px;
+    line-height: 37px;
+    border: 1px solid @bg-darkgrey;
+    border-radius: 2px;
+
+    &:last-of-type {
+      padding: 16px 29px;
+      margin-left: 0;
+      margin-right: 20px;
+    }
+  }
+
+  .example__characteristic {
+    position: absolute;
+    background-color: @bg-lightgrey;
+  }
+
+  .example-weight {
+    top: 420px;
+    left: 67px;
+    width: 107px;
+  }
+
+  .example-time {
+    top: 420px;
+    left: 258px;
+    width: 135px;
+    height: 22px;
+  }
+
+  .example__cost {
+    position: static;
+    width: 330px;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 76px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .example__spacing {
+    padding-left: 60px;
+  }
+
+  .example__image-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: @bg-lightgrey; /* Два разных цвета фона и две кошки */
+    margin: 0;
+    width: 750px;
+
+    height: 462px;
   }
 
   .example__image {
+    position: absolute;
+    top: -190px;
+    right: 0;
+    left: 37px;
+    bottom: 0;
+    margin: 0;
     width: 677px;
-    min-height: 499px;
+    min-height: 505px;
 
     background-image: url("../img/before-desktop@1x.png");
     background-repeat: no-repeat;
     background-position: 0 0;
   }
 
-  .example-wrapper {
-    display: flex;
-    justify-content: space-around;
+  .example__range-wrapper {
+    margin: 0 auto;
+    padding-top: 5px;
+    padding-bottom: 68px;
+  }
+
+  .example__range {
+    font-size: 20px;
+    line-height: 20px;
+
+    border-bottom: 1px dotted @bg-darkgrey;
+    padding-bottom: 5px;
+    margin-top: 0;
+
+
+    &:hover {
+      border-bottom: 1px solid @bg-bluishblack;
+    }
+
+    &:active {
+      border: none;
+    }
   }
 }

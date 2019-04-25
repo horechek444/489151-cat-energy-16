@@ -1,5 +1,4 @@
 @import "font";
-@import "report";
 @import "effects";
 @import "page-header";
 @import "mian-nav";
@@ -15,6 +14,7 @@
 @import "program-selection";
 @import "variables";
 @import "mixins";
+@import "report";
 
 html,
 body {
@@ -30,10 +30,10 @@ body {
   line-height: 18px;
   font-weight: 400;
   font-family: "Oswald", "Arial MT", sans-serif;
-  color: #444444;
+  color: @bg-bluishblack;
   font-style: normal;
 
-  background-color: #ffffff;
+  background-color: @bg-white;
 }
 
 a {
