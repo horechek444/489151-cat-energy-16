@@ -69,6 +69,23 @@ input[type] {
   border: 1px solid rgba(205, 205, 205, 0.5);
   height: 42px;
   padding-left: 13px;
+  box-sizing: border-box;
+
+  &:hover {
+    border: 1px solid @bg-darkgrey;
+  }
+
+  &:focus {
+    border: 1px solid @bg-darkgrey;
+  }
+
+  &:active {
+    border: 2px solid @bg-bluishblack;
+  }
+
+  &:invalid {
+    border: 2px solid @bg-errorform;
+  }
 }
 
 input[name="login"] {
@@ -106,7 +123,6 @@ input[name="phone"] {
 
 .program-selection__list {
   .list-reset();
-  height: 156px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -114,6 +130,7 @@ input[name="phone"] {
 
 .program-selection__border {
   min-width: 253px;
+  height: 156px;
   border: 1px solid rgba(205, 205, 205, 0.5);
 }
 
@@ -414,7 +431,6 @@ input[name="phone"] {
 
   .program-selection__list {
     .list-reset();
-    height: 194px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -426,6 +442,7 @@ input[name="phone"] {
 
   .program-selection__border {
     width: 628px;
+    height: 194px;
     border: 1px solid rgba(205, 205, 205, 0.5);
     margin-left: 60px;
   }
@@ -586,7 +603,7 @@ input[name="phone"] {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-left: 55px;
-    height: 112px;
+    min-height: 112px;
     margin-bottom: 11px;
     width: 543px;
   }
@@ -686,7 +703,7 @@ input[name="phone"] {
     width: 1282px;
     padding-top: 75px;
     padding-left: 38px;
-    margin-bottom: 72px; /* !!! */
+    margin-bottom: 82px; /* !!! */
   }
 
   .program-selection__main-title {
@@ -749,7 +766,7 @@ input[name="phone"] {
     min-width: 451px;
   }
 
-  .program-selection__case {
+  .program-selection__profile {
     display: flex;
     flex-direction: row;
     width: 1225px;
@@ -809,11 +826,9 @@ input[name="phone"] {
   .program-selection__contact {
     display: flex;
     flex-direction: row;
-    width: 1222px;
-    max-height: 54px;
-    margin: 0;
     justify-content: space-between;
-    //align-self: stretch;
+    width: 1222px;
+    min-height: 54px;
   }
 
   .program-selection__contact p {
@@ -822,14 +837,101 @@ input[name="phone"] {
   }
 
   .email__wrapper {
-    margin-bottom: 0;
+    margin-bottom: 66px;
   }
 
-  .email__wrapper .program-selection__co {
+  .program-selection__comment textarea {
+    margin-top: 75px;
+    margin-left: 2px;
+    margin-bottom: 10px;
+    padding-top: 9px;
+    padding-left: 17px;
+    width: 1220px;
+    height: 162px;
+  }
+
+  .program-selection__comment {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 57px;
+  }
+
+  .legend-comment::after {
+    width: 780px;
+    top: 22px;
+    right: -816px;
+  }
+
+  .legend-comment::before {
+    width: 70px;
+    top: 22px;
+    left: -106px;
+  }
+
+  .legend-optionally {
+    margin-bottom: 66px;
+  }
+
+  .legend-optionally::after {
+    width: 1080px;
+    top: 22px;
+    right: -1121px;
+  }
+
+  .legend-optionally::before {
+    width: 70px;
+    top: 22px;
+    left: -106px;
+  }
+
+  .program-selection__optionally {
+    .list-reset();
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 57px;
+    min-height: 40px;
+    margin-bottom: 52px;
+    width: 1065px;
+  }
+
+  .checkbox__item label {
+    position: relative;
+
+    display: block;
+
+    cursor: pointer;
+    user-select: none;
     margin: 0;
   }
 
-  .program-selection__button {
+  .checkbox__item:nth-child(3n) label {  /* Двигаю, потому что обычное space-between очень сильно отличается от макета у 2 и 3 li */
+    margin-left: 30px;
+  }
+
+  .checkbox__item:last-child label {  /* Двигаю, потому что обычное space-between очень сильно отличается от макета у 2 и 3 li */
+    margin-right: 0;
+    margin-left: 92px;
+  }
+
+  .program-selection__skin {
+    display: flex;
+  }
+
+  .page-main .program-selection__button {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
     padding: 16px 208px;
+    margin-left: 2px;
+    margin-bottom: 0;
+  }
+
+  .program-selection__necessary {
+    font-size: 16px;
+    line-height: 16px;
+    margin-left: 81px;
+    margin-bottom: 0;
   }
 }

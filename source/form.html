@@ -11,7 +11,7 @@
   <body>
 
     <header class="page-header">
-        <a class="page-header__logo" href="#">
+        <a class="page-header__logo" href="index.html">
           <picture>
             <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -45,7 +45,7 @@
 
         <h2 class="program-selection__main-title">Подбор программы</h2>
         <p class="program-selection__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
-        <div class="program-selection__case">
+        <div class="program-selection__case program-selection__profile">
           <form action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="program-selection__wrapper">
               <legend class="visually-hidden"><h3>Анкета:</h3></legend>
@@ -93,7 +93,7 @@
             <div class="program-selection__case program-selection__contact">
               <p>
                 <label class="program-selection__label" for="email">E-mail:*</label>
-                <input class="program-selection__user" id="email" type="email" name="email" placeholder="kuklachev@gmail.com">
+                <input class="program-selection__user" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
               </p>
               <p>
                 <label class="program-selection__label" for="phone">Телефон:*</label>
@@ -150,9 +150,8 @@
             </div>
           </div>
         </div>
-        <a class="contacts__map map" href="https://yandex.ru/map-widget/v1/-/CBe~eIQtXA" title="Карта">
-          <div class="contacts__map-image"></div>
-        </a>
+        <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A8c580b36218e042ad56d5d5fa502ab0084cab42e17d5a9eab108572be70a1daf&amp;source=constructor" width="100%" height="362" frameborder="0"></iframe>
+        <div class="contacts__map-image"></div>
       </section>
     </main>
 
