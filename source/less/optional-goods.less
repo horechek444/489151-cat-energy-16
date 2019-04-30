@@ -79,6 +79,7 @@
 }
 
 .optional-goods__description {
+  position: relative;
   margin-top: 187px;
   margin-left: 59px;
 
@@ -89,6 +90,22 @@
   font-weight: 400;
   line-height: 20px;
   text-align: center;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -122px;
+    left: 55px;
+
+    width: 55px;
+    height: 60px;
+
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    z-index: 5;
+  }
 }
 
 .optional-goods__order {
@@ -202,9 +219,18 @@
   }
 
   .optional-goods__description {
+    position: relative;
     margin-top: 73px;
     margin-left: 424px;
     text-align: left;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -8px;
+      left: -333px;
+    }
   }
 
   .optional-goods__image {
@@ -310,10 +336,19 @@
   }
 
   .optional-goods__description {
+    position: relative;
     margin-top: 188px;
     margin-left: 43px;
     padding: 0;
     text-align: center;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -123px;
+      left: 53px;
+    }
   }
 
   .optional-goods__image {
