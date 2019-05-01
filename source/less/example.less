@@ -116,6 +116,11 @@
   background-image: url("../img/before-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: 0 0;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/before-mobile@2x.png");
+    background-size: 311px auto;
+  }
 }
 
 .example__range-wrapper {
@@ -249,6 +254,11 @@
     background-repeat: no-repeat;
     background-position: 0 0;
     background-color: transparent;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/before-tablet@2x.png");
+      background-size: 677px auto;
+    }
   }
 
   .example__range-wrapper {
@@ -388,6 +398,11 @@
     background-image: url("../img/before-desktop@1x.png");
     background-repeat: no-repeat;
     background-position: 0 0;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/before-desktop@2x.png");
+      background-size: 677px auto;
+    }
   }
 
   .example__range-wrapper {
