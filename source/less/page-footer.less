@@ -13,7 +13,6 @@
   position: relative;
   margin: 0 auto;
   padding-bottom: 31px;
-  width: 128px;
   height: 24px;
 
   &::after {
@@ -28,6 +27,12 @@
 
     background-color: @bg-darkgrey;
   }
+}
+
+.page-footer__logo-image {
+  margin: 0;
+  padding: 0;
+  fill: @bg-almostblack;
 
   &:hover {
     opacity: 0.8;
@@ -36,13 +41,6 @@
   &:active {
     opacity: 0.6;
   }
-}
-
-.page-footer__logo-image {
-  margin: 0;
-  padding: 0;
-  width: 128px;
-  height: 24px;
 }
 
 .social__list {
@@ -71,20 +69,14 @@
   }
 }
 
-.social__item {
-  &:hover path {
+.social__icon {
+  fill: @bg-dullgrey;
+
+  &:hover {
     fill: @bg-ligthgreen;
   }
 
-  &:hover circle {
-    fill: @bg-ligthgreen;
-  }
-
-  &:active path {
-    fill: rgba(104, 183, 56, 0.3);
-  }
-
-  &:active circle {
+  &:active {
     fill: rgba(104, 183, 56, 0.3);
   }
 }
@@ -104,15 +96,19 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.copyright__logo:hover path {
-  fill: @bg-ligthgreen;
-}
-
-.copyright__logo:active path {
-  fill: rgba(104, 183, 56, 0.3);
-}
+//.copyright__logo:hover path {
+//  fill: @bg-ligthgreen;
+//}
+//
+//.copyright__logo:active path {
+//  fill: rgba(104, 183, 56, 0.3);
+//}
 
 @media (min-width: @tablet-width) {
   .page-footer {
@@ -149,17 +145,17 @@
     }
   }
 
-  .social__link--vkontakte svg {
+  .social__vk {
     width: 30px;
     height: 16px;
   }
 
-  .social__link--instagram svg {
+  .social__ig {
     width: 23px;
     height: 23px;
   }
 
-  .social__link--facebook svg {
+  .social__fb {
     width: 14px;
     height: 28px;
   }
@@ -169,18 +165,6 @@
     width: 162px;
     justify-content: space-between;
     margin: 0;
-  }
-
-  .copyright__link {
-    color: @bg-bluishblack;
-    font-family: "Arial MT", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 16px;
-
-    &:active {
-      opacity: 0.3;
-    }
   }
 }
 
