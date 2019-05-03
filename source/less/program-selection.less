@@ -75,12 +75,10 @@ input[type] {
     border: 1px solid @bg-darkgrey;
   }
 
-  &:focus {
-    border: 2px solid @bg-bluishblack;
-  }
-
+  &:focus,
   &:active {
     border: 2px solid @bg-bluishblack;
+    outline: none;
   }
 
   //&:invalid {
@@ -102,6 +100,22 @@ input[type] {
 
 :-ms-input-placeholder {
   color: @bg-bluishblack;
+}
+
+input[type="range"] {
+  width: 84px;
+  height: 14px;
+  padding-left: 6px;
+  border: 1px solid @bg-darkgrey;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: @bg-white;
+
+  &:focus,
+  &:active {
+    border: none;
+    outline: none;
+  }
 }
 
 input[type="text"] {
@@ -255,36 +269,22 @@ input[name="phone"] {
   position: absolute;
   top: 99px;
   left: 265px;
-
-  width: 17px;
-  height: 13px;
-
-  background-image: url("../img/icon-mail.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
 }
 
 input[type="email"]:focus + .program-selection__email,
 input[type="email"]:active + .program-selection__email {
-  background-image: url("../img/icon-mail-active.svg");
+  fill: @bg-ligthgreen;
 }
 
 .program-selection__phone {
   position: absolute;
   top: 154px;
   left: 265px;
-
-  width: 20px;
-  height: 20px;
-
-  background-image: url("../img/icon-phone.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
 }
 
 input[type="tel"]:focus + .program-selection__phone,
 input[type="tel"]:active + .program-selection__phone {
-  background-image: url("../img/icon-phone-active.svg");
+  fill: @bg-ligthgreen;
 }
 
 .legend-contact::after {
@@ -320,12 +320,10 @@ input[type="tel"]:active + .program-selection__phone {
     border: 1px solid @bg-darkgrey;
   }
 
-  &:focus {
-    border: 2px solid @bg-bluishblack;
-  }
-
+  &:focus,
   &:active {
     border: 2px solid @bg-bluishblack;
+    outline: none;
   }
 }
 
@@ -479,6 +477,20 @@ input[type="tel"]:active + .program-selection__phone {
     padding-left: 19px;
   }
 
+  input[type="range"] {
+    width: 428px;
+    height: 6px;
+    padding-left: 0;
+    border: none;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color: @bg-gainsborough;
+
+    &:hover {
+      border: none;
+    }
+  }
+
   input[name="login"] {
     min-width: 568px;
   }
@@ -609,38 +621,24 @@ input[type="tel"]:active + .program-selection__phone {
 
   .program-selection__email {
     position: absolute;
-    top: 132px;
+    top: 130px;
     left: 654px;
-
-    width: 17px;
-    height: 13px;
-
-    background-image: url("../img/icon-mail.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
   }
 
   input[type="email"]:focus + .program-selection__email,
   input[type="email"]:active + .program-selection__email {
-    background-image: url("../img/icon-mail-active.svg");
+    fill: @bg-ligthgreen;
   }
 
   .program-selection__phone {
     position: absolute;
     top: 201px;
     left: 654px;
-
-    width: 20px;
-    height: 20px;
-
-    background-image: url("../img/icon-phone.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
   }
 
   input[type="tel"]:focus + .program-selection__phone,
   input[type="tel"]:active + .program-selection__phone {
-    background-image: url("../img/icon-phone-active.svg");
+    fill: @bg-ligthgreen;
   }
 
 
@@ -927,38 +925,24 @@ input[type="tel"]:active + .program-selection__phone {
 
   .program-selection__email {
     position: absolute;
-    top: 132px;
+    top: 130px;
     left: 533px;
-
-    width: 17px;
-    height: 13px;
-
-    background-image: url("../img/icon-mail.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
   }
 
   input[type="email"]:focus + .program-selection__email,
   input[type="email"]:active + .program-selection__email {
-    background-image: url("../img/icon-mail-active.svg");
+    fill: @bg-ligthgreen;
   }
 
   .program-selection__phone {
     position: absolute;
-    top: 130px;
+    top: 127px;
     left: 1181px;
-
-    width: 20px;
-    height: 20px;
-
-    background-image: url("../img/icon-phone.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
   }
 
   input[type="tel"]:focus + .program-selection__phone,
   input[type="tel"]:active + .program-selection__phone {
-    background-image: url("../img/icon-phone-active.svg");
+    fill: @bg-ligthgreen;
   }
 
   .legend-contact {
