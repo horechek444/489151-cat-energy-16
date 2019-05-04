@@ -66,6 +66,7 @@ input[type] {
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
+  vertical-align: center;
   border: 1px solid rgba(205, 205, 205, 0.5);
   height: 42px;
   padding-left: 13px;
@@ -81,9 +82,9 @@ input[type] {
     outline: none;
   }
 
-  //&:invalid {
-  //  border: 2px solid @bg-errorform;
-  //}
+  &:invalid {
+    border: 2px solid @bg-errorform;
+  }
 }
 
 ::-webkit-input-placeholder {
@@ -168,9 +169,12 @@ input[name="phone"] {
   border: 1px solid rgba(205, 205, 205, 0.5);
 }
 
-.radio__item label {
-  position: relative;
+input[type="radio"] {
+  display: none;
+}
 
+input[type="radio"] + label {
+  position: relative;
   display: block;
   cursor: pointer;
   user-select: none;
@@ -182,7 +186,7 @@ input[name="phone"] {
   margin-bottom: 28px;
 }
 
-.filter-radio + label::before {
+input[type="radio"] + label::before {
   content: "";
 
   position: absolute;
@@ -196,7 +200,7 @@ input[name="phone"] {
   border-radius: 50%;
 }
 
-.filter-radio:checked + label::after {
+input[type="radio"]:checked + label::after {
   content: "";
 
   position: absolute;
@@ -210,26 +214,18 @@ input[name="phone"] {
   border-radius: 50%;
 }
 
-.filter-radio:disabled + label {
+input[type="radio"]:disabled + label {
   opacity: 0.3;
 }
 
-.filter-radio:hover + label::before,
-.filter-radio:focus + label::before {
+input[type="radio"]:hover + label::before,
+input[type="radio"]:focus + label::before {
   border-color: @bg-darklygrey;
 }
 
-.filter-radio:active + label::before {
+input[type="radio"]:active + label {
   border-color: @bg-darklygrey;
   opacity: 0.3;
-
-  cursor: not-allowed;
-}
-
-.filter-radio:checked:active + label::after {
-  opacity: 0.3;
-
-  cursor: not-allowed;
 }
 
 .program-selection__case {
@@ -265,9 +261,13 @@ input[name="phone"] {
   }
 }
 
+.program-selection__contact {
+  position: relative;
+}
+
 .program-selection__email {
   position: absolute;
-  top: 99px;
+  top: 31px;
   left: 265px;
 }
 
@@ -278,7 +278,7 @@ input[type="email"]:active + .program-selection__email {
 
 .program-selection__phone {
   position: absolute;
-  top: 154px;
+  top: 87px;
   left: 265px;
 }
 
@@ -348,16 +348,18 @@ input[type="tel"]:active + .program-selection__phone {
   margin-bottom: 42px;
 }
 
-.checkbox__item label {
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
   position: relative;
-
   display: block;
-
   cursor: pointer;
   user-select: none;
 }
 
-.filter-checkbox + label::before {
+input[type="checkbox"] + label::before {
   content: "";
 
   position: absolute;
@@ -370,7 +372,7 @@ input[type="tel"]:active + .program-selection__phone {
   border: 1px solid @bg-darkgrey;
 }
 
-.filter-checkbox:checked + label::after {
+input[type="checkbox"]:checked + label::after {
   content: "";
 
   position: absolute;
@@ -385,26 +387,18 @@ input[type="tel"]:active + .program-selection__phone {
   background-position: 0 0;
 }
 
-.filter-checkbox:disabled + label {
+input[type="checkbox"]:disabled + label {
   opacity: 0.3;
 }
 
-.filter-checkbox:hover + label::before,
-.filter-checkbox:focus + label::before {
+input[type="checkbox"]:hover + label::before,
+input[type="checkbox"]:focus + label::before {
   border-color: @bg-darklygrey;
 }
 
-.filter-checkbox:active + label::before {
+input[type="checkbox"]:active + label {
   border-color: @bg-darklygrey;
   opacity: 0.3;
-
-  cursor: not-allowed;
-}
-
-.filter-checkbox:checked:active + label::after {
-  opacity: 0.3;
-
-  cursor: not-allowed;
 }
 
 .program-selection__button {
@@ -529,7 +523,7 @@ input[type="tel"]:active + .program-selection__phone {
     margin-left: 60px;
   }
 
-  .radio__item label {
+  input[type="radio"] + label {
     position: relative;
 
     display: block;
@@ -539,7 +533,7 @@ input[type="tel"]:active + .program-selection__phone {
     margin-left: 88px;
   }
 
-  .filter-radio + label::before {
+  input[type="radio"] + label::before {
     content: "";
 
     position: absolute;
@@ -553,7 +547,7 @@ input[type="tel"]:active + .program-selection__phone {
     border-radius: 50%;
   }
 
-  .filter-radio:checked + label::after {
+  input[type="radio"]:checked + label::after {
     content: "";
 
     position: absolute;
@@ -621,7 +615,7 @@ input[type="tel"]:active + .program-selection__phone {
 
   .program-selection__email {
     position: absolute;
-    top: 130px;
+    top: 18px;
     left: 654px;
   }
 
@@ -632,7 +626,7 @@ input[type="tel"]:active + .program-selection__phone {
 
   .program-selection__phone {
     position: absolute;
-    top: 201px;
+    top: 90px;
     left: 654px;
   }
 
@@ -713,7 +707,7 @@ input[type="tel"]:active + .program-selection__phone {
     width: 543px;
   }
 
-  .checkbox__item label {
+  input[type="checkbox"] + label {
     position: relative;
 
     display: block;
@@ -726,7 +720,7 @@ input[type="tel"]:active + .program-selection__phone {
     margin-right: 49px;
   }
 
-  .filter-checkbox + label::before {
+  input[type="checkbox"] + label::before {
     content: "";
 
     position: absolute;
@@ -739,7 +733,7 @@ input[type="tel"]:active + .program-selection__phone {
     border: 1px solid @bg-darkgrey;
   }
 
-  .filter-checkbox:checked + label::after {
+  input[type="checkbox"]:checked + label::after {
     content: "";
 
     position: absolute;
@@ -752,28 +746,6 @@ input[type="tel"]:active + .program-selection__phone {
     background-image: url("../img/icon-tick.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
-  }
-
-  .filter-checkbox:disabled + label {
-    opacity: 0.3;
-  }
-
-  .filter-checkbox:hover + label::before,
-  .filter-checkbox:focus + label::before {
-    border-color: @bg-darklygrey;
-  }
-
-  .filter-checkbox:active + label::before {
-    border-color: @bg-darklygrey;
-    opacity: 0.3;
-
-    cursor: not-allowed;
-  }
-
-  .filter-checkbox:checked:active + label::after {
-    opacity: 0.3;
-
-    cursor: not-allowed;
   }
 
   .program-selection__skin {
@@ -925,7 +897,7 @@ input[type="tel"]:active + .program-selection__phone {
 
   .program-selection__email {
     position: absolute;
-    top: 130px;
+    top: 18px;
     left: 533px;
   }
 
@@ -936,7 +908,7 @@ input[type="tel"]:active + .program-selection__phone {
 
   .program-selection__phone {
     position: absolute;
-    top: 127px;
+    top: 16px;
     left: 1181px;
   }
 
@@ -1021,16 +993,6 @@ input[type="tel"]:active + .program-selection__phone {
     min-height: 40px;
     margin-bottom: 52px;
     width: 1065px;
-  }
-
-  .checkbox__item label {
-    position: relative;
-
-    display: block;
-
-    cursor: pointer;
-    user-select: none;
-    margin: 0;
   }
 
   .checkbox__item:nth-child(3n) label {  /* Двигаю, потому что обычное space-between очень сильно отличается от макета у 2 и 3 li */

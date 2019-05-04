@@ -150,6 +150,10 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
 
+input[type="range"]::-moz-range-thumb {
+  display: none;
+}
+
 input[type="range"]::-ms-track {
   width: 100%;
   cursor: pointer;
@@ -160,6 +164,7 @@ input[type="range"]::-ms-track {
 }
 
 input[type="range"] {
+  -webkit-appearance: none;
   width: 84px;
   height: 14px;
   margin-right: 19px;
@@ -377,7 +382,7 @@ input[type="range"]:focus::-ms-fill-upper {
     width: 100%;
     height: 0;
     cursor: pointer;
-    background: transparent;
+    background-color: transparent;
     border-radius: 0;
   }
 
@@ -389,7 +394,7 @@ input[type="range"]:focus::-ms-fill-upper {
     width: 100%;
     height: 0;
     cursor: pointer;
-    background: transparent;
+    background-color: transparent;
     border-radius: 0;
   }
 
@@ -397,7 +402,7 @@ input[type="range"]:focus::-ms-fill-upper {
     width: 100%;
     height: 0;
     cursor: pointer;
-    background: transparent;
+    background-color: transparent;
     border-radius: 0;
   }
 
@@ -405,31 +410,31 @@ input[type="range"]:focus::-ms-fill-upper {
     width: 100%;
     height: 0;
     cursor: pointer;
-    background: transparent;
+    background-color: transparent;
     border-radius: 0;
   }
 
   input[type="range"]:focus::-ms-fill-lower {
-    background: transparent;
+    background-color: transparent;
   }
 
   input[type="range"]::-ms-fill-upper {
     width: 100%;
     height: 0;
     cursor: pointer;
-    background: transparent;
+    background-color: transparent;
     border-radius: 0;
   }
 
   input[type="range"]:focus::-ms-fill-upper {
-    background: transparent;
+    background-color: transparent;
   }
 
   input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 34px;
     width: 34px;
-    background: @bg-ligthgreen;
+    background-color: @bg-ligthgreen;
     border: 13px solid @bg-white;
     border-radius: 50%;
     cursor: pointer;
@@ -445,14 +450,14 @@ input[type="range"]:focus::-ms-fill-upper {
       height: 33px;
       width: 33px;
       border: 12px solid @bg-white;
-      box-shadow: 0 0 0 2px @bg-ligthgreen;
+      box-shadow: 0 0 0 2px @bg-ligthgreen, 0 4px 6px rgba(0, 0, 0, 0.4);
     }
   }
 
   input[type="range"]::-moz-range-thumb {
     height: 34px;
     width: 34px;
-    background: @bg-ligthgreen;
+    background-color: @bg-ligthgreen;
     border: 13px solid @bg-white;
     border-radius: 50%;
     cursor: pointer;
@@ -463,7 +468,7 @@ input[type="range"]:focus::-ms-fill-upper {
   input[type="range"]::-ms-thumb {
     height: 34px;
     width: 34px;
-    background: @bg-ligthgreen;
+    background-color: @bg-ligthgreen;
     border: 13px solid @bg-white;
     border-radius: 50%;
     cursor: pointer;
