@@ -300,7 +300,7 @@ input[type="tel"]:active + .program-selection__phone {
 .program-selection__comment textarea {
   margin-top: 34px;
   margin-left: 19px;
-  margin-bottom: 10px;
+  margin-bottom: 23px;
   padding-top: 11px;
   padding-left: 15px;
   box-sizing: border-box;
@@ -326,14 +326,17 @@ input[type="tel"]:active + .program-selection__phone {
   right: -115px;
 }
 
+.optionally-wrapper {
+  margin-bottom: 45px;
+}
+
 .program-selection__optionally {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-left: 46px;
-  min-height: 146px;
-  margin-bottom: 42px;
+  width: 140px;
+  min-height: 142px;
   .list-reset();
 }
 
@@ -344,6 +347,8 @@ input[type="checkbox"] {
 input[type="checkbox"] + label {
   position: relative;
   display: block;
+  height: 14px;
+  margin-left: 63px;
   cursor: pointer;
   user-select: none;
 }
@@ -395,7 +400,7 @@ input[type="checkbox"]:active + label {
 
 .program-selection__necessary {
   margin-left: 84px;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
   font-weight: 400;
   font-size: 14px;
   line-height: 15px;
@@ -609,7 +614,6 @@ input[type="checkbox"]:active + label {
     fill: @bg-ligthgreen;
   }
 
-
   .legend-contact {
     width: 512px;
     margin-bottom: 75px;
@@ -629,10 +633,10 @@ input[type="checkbox"]:active + label {
 
   .program-selection__comment textarea {
     width: 610px;
-    height: 160px;
+    height: 174px;
     margin-top: 75px;
     margin-left: 61px;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
     padding-top: 9px;
     padding-left: 17px;
   }
@@ -669,27 +673,30 @@ input[type="checkbox"]:active + label {
     width: 30px;
   }
 
+  .optionally-wrapper {
+    margin-bottom: 11px;
+  }
+
   .program-selection__optionally {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 543px;
+    width: 620px;
     min-height: 146px;
-    margin-left: 55px;
-    margin-bottom: 11px;
     .list-reset();
   }
 
   input[type="checkbox"] + label {
     position: relative;
     display: block;
-    cursor: pointer;
+    width: 160px;
+    margin-left: 116px;
     user-select: none;
   }
 
-  .checkbox__item:last-child label {
-    margin-right: 49px;
+  .checkbox__item:nth-child(2n) label {
+    margin-right: 0;
   }
 
   input[type="checkbox"] + label::before {
@@ -947,25 +954,37 @@ input[type="checkbox"]:active + label {
     width: 70px;
   }
 
+  .optionally-wrapper {
+    margin-bottom: 52px;
+  }
+
   .program-selection__optionally {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 1065px;
-    margin-left: 57px;
+    width: 1122px;
     min-height: 40px;
-    margin-bottom: 52px;
+    margin-right: 0;
     .list-reset();
   }
 
-  .checkbox__item:nth-child(3n) label {  /* Двигаю, потому что обычное space-between очень сильно отличается от макета у 2 и 3 li */
-    margin-left: 30px;
+  input[type="checkbox"] + label {
+    position: relative;
+    display: block;
+    width: auto;
+    margin-left: 57px;
+    margin-right: 0;
+    user-select: none;
   }
 
-  .checkbox__item:last-child label {  /* Двигаю, потому что обычное space-between очень сильно отличается от макета у 2 и 3 li */
+  .checkbox__item:nth-child(3n) label {  /* Двигаю, потому что обычное space-between очень сильно отличается от макета у 2 и 3 li */
+    margin-left: 88px;
+  }
+
+  .checkbox__item:last-child {  /* Двигаю, потому что обычное space-between очень сильно отличается от макета у 2 и 3 li */
     margin-right: 0;
-    margin-left: 92px;
+    margin-left: 91px;
   }
 
   .program-selection__skin {
