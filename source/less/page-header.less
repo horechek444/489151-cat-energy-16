@@ -1,10 +1,9 @@
 .page-header {
   position: relative;
-  margin: 0 auto;
-  width: 320px;
-
   display: flex;
   flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .page-header__logo {
@@ -12,23 +11,23 @@
 }
 
 .page-header__logo-image {
-  margin-left: 20px;
-  margin-right: 65px;
   width: 191px;
   height: 62px;
+  margin-left: 20px;
+  margin-right: 65px;
 }
 
 @media (min-width: @tablet-width) {
   .page-header {
-    width: @tablet-width;
     flex-direction: row;
     justify-content: space-between;
+    width: @tablet-width;
   }
 
   .page-header__logo {
+    width: 205px;
     margin: 0;
     padding: 0;
-    width: 205px;
     border-bottom: none;
 
     &:hover {
@@ -42,11 +41,11 @@
 
   .page-header__logo-image {
     display: block;
+    width: 173px;
+    height: 58px;
     margin-top: 24px;
     margin-left: 30px;
     margin-right: 0;
-    width: 173px;
-    height: 58px;
   }
 }
 
@@ -60,10 +59,10 @@
   }
 
   .page-header__logo-image {
-    margin-top: 54px;
-    margin-left: 40px;
     width: 202px;
     height: 59px;
+    margin-top: 54px;
+    margin-left: 40px;
   }
 
   .page-main-header {

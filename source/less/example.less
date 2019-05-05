@@ -9,13 +9,12 @@
 
 .example__title {
   margin: 0;
-  padding: 0;
   margin-bottom: 23px;
-
-  color: @bg-almostblack;
-  font-size: 36px;
+  padding: 0;
   font-weight: 400;
+  font-size: 36px;
   line-height: 60px;
+  color: @bg-almostblack;
 }
 
 .example__description {
@@ -23,12 +22,11 @@
   margin-right: 32px;
   margin-bottom: 24px;
   padding: 0;
-
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
   color: @bg-bluishblack;
   font-family: "Arial MT", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
   letter-spacing: -0.1px;
 }
 
@@ -41,33 +39,30 @@
   margin: 0;
   margin-right: 32px;
   padding: 15px 41px;
-
-  color: @bg-almostblack;
-  font-size: 24px;
   font-weight: 400;
+  font-size: 24px;
   line-height: 24px;
+  color: @bg-almostblack;
   text-align: center;
   text-transform: uppercase;
-
   border: 1px solid @bg-darkgrey;
   border-radius: 2px;
 
   &:last-child {
-    padding: 15px 21px;
     margin-left: 0;
     margin-right: 20px;
+    padding: 15px 21px;
   }
 }
 
 .example__characteristic {
   position: absolute;
-
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
   color: @bg-bluishblack;
   font-family: "Arial MT", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
   text-align: center;
-  line-height: 12px;
   background-color: @bg-lightgrey;
 }
 
@@ -87,10 +82,10 @@
 .example__cost {
   padding: 0;
   margin-left: 47px;
-  color: @bg-almostblack;
-  font-size: 14px;
   font-weight: 400;
+  font-size: 14px;
   line-height: 20px;
+  color: @bg-almostblack;
   text-transform: uppercase;
 }
 
@@ -106,12 +101,9 @@
   position: absolute;
   top: 20px;
   left: -20px;
-
   width: 320px;
   height: 240px;
-
   margin-bottom: 41px;
-
   background-image: url("../img/before-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -133,11 +125,12 @@
 }
 
 .example__range {
-  color: @bg-almostblack;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
+  color: @bg-almostblack;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 input[type="range"] {
@@ -150,84 +143,89 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
 
+input[type="range"]::-moz-range-thumb {
+  display: none;
+}
+
 input[type="range"]::-ms-track {
   width: 100%;
-  cursor: pointer;
-  background: transparent;
-  border-color: transparent;
   color: transparent;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
   outline: none;
 }
 
 input[type="range"] {
+  -webkit-appearance: none;
   width: 84px;
   height: 14px;
   margin-right: 19px;
   margin-left: 19px;
   padding: 4px 6px;
+  background-color: @bg-white;
   border: 1px solid @bg-darkgrey;
   border-radius: 6px;
   box-sizing: border-box;
-  background-color: @bg-white;
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 6px;
-  cursor: pointer;
   background: @bg-ligthgreen;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 input[type="range"]:focus::-webkit-slider-runnable-track {
-  background: @bg-ligthgreen;
+  background-color: @bg-ligthgreen;
 }
 
 input[type="range"]::-moz-range-track {
   width: 100%;
   height: 6px;
-  cursor: pointer;
-  background: @bg-ligthgreen;
+  background-color: @bg-ligthgreen;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 input[type="range"]::-ms-track {
   width: 100%;
   height: 6px;
-  cursor: pointer;
-  background: @bg-ligthgreen;
+  background-color: @bg-ligthgreen;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 input[type="range"]::-ms-fill-lower {
   width: 100%;
   height: 6px;
-  cursor: pointer;
-  background: @bg-ligthgreen;
+  background-color: @bg-ligthgreen;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 input[type="range"]:focus::-ms-fill-lower {
-  background: @bg-ligthgreen;
+  background-color: @bg-ligthgreen;
 }
 
 input[type="range"]::-ms-fill-upper {
   width: 100%;
   height: 6px;
-  cursor: pointer;
-  background: @bg-ligthgreen;
+  background-color: @bg-ligthgreen;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 input[type="range"]:focus::-ms-fill-upper {
-  background: @bg-ligthgreen;
+  background-color: @bg-ligthgreen;
 }
 
 @media (min-width: @tablet-width) {
   .example {
     width: @tablet-width;
-    background-color: @bg-white;
     padding: 0;
+    background-color: @bg-white;
   }
 
   .example-wrapper {
@@ -242,7 +240,6 @@ input[type="range"]:focus::-ms-fill-upper {
     margin-bottom: 40px;
     padding: 0;
     padding-bottom: 23px;
-
     font-size: 60px;
     line-height: 60px;
   }
@@ -251,7 +248,6 @@ input[type="range"]:focus::-ms-fill-upper {
     margin: 0;
     margin-bottom: 54px;
     padding: 0;
-
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.1px;
@@ -265,21 +261,19 @@ input[type="range"]:focus::-ms-fill-upper {
     margin: 0;
     margin-right: 42px;
     padding: 16px 56px;
-
     font-size: 30px;
     line-height: 37px;
     border: 1px solid @bg-darkgrey;
     border-radius: 2px;
 
     &:last-of-type {
-      padding: 16px 29px;
       margin: 0;
+      padding: 16px 29px;
     }
   }
 
   .example__characteristic {
     position: absolute;
-
     font-size: 14px;
     line-height: 14px;
     background-color: @bg-white;
@@ -303,11 +297,11 @@ input[type="range"]:focus::-ms-fill-upper {
     top: 258px;
     right: 30px;
     width: 175px;
-    text-align: right;
-    padding: 0;
     margin: 0;
+    padding: 0;
     font-size: 20px;
     line-height: 27px;
+    text-align: right;
   }
 
   .example__image-wrapper {
@@ -315,10 +309,9 @@ input[type="range"]:focus::-ms-fill-upper {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-color: @bg-lightgrey;
-    margin: 0;
-
     height: 462px;
+    margin: 0;
+    background-color: @bg-lightgrey;
   }
 
   .example__image {
@@ -327,7 +320,6 @@ input[type="range"]:focus::-ms-fill-upper {
     left: 46px;
     width: 690px;
     min-height: 517px;
-
     background-image: url("../img/before-tablet@1x.png");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -348,7 +340,6 @@ input[type="range"]:focus::-ms-fill-upper {
   .example__range {
     font-size: 20px;
     line-height: 20px;
-
     border-bottom: 1px dotted @bg-darkgrey;
     padding-bottom: 5px;
 
@@ -367,73 +358,73 @@ input[type="range"]:focus::-ms-fill-upper {
     margin-right: 24px;
     margin-left: 24px;
     padding: 0;
+    background-color: @bg-gainsborough;
     border: none;
     border-radius: 3px;
     box-sizing: border-box;
-    background-color: @bg-gainsborough;
   }
 
   input[type="range"]::-webkit-slider-runnable-track { /* Полоса */
     width: 100%;
     height: 0;
-    cursor: pointer;
-    background: transparent;
+    background-color: transparent;
     border-radius: 0;
+    cursor: pointer;
   }
 
   input[type="range"]:focus::-webkit-slider-runnable-track {
-    background: transparent;
+    background-color: transparent;
   }
 
   input[type="range"]::-moz-range-track {
     width: 100%;
     height: 0;
-    cursor: pointer;
-    background: transparent;
+    background-color: transparent;
     border-radius: 0;
+    cursor: pointer;
   }
 
   input[type="range"]::-ms-track {
     width: 100%;
     height: 0;
-    cursor: pointer;
-    background: transparent;
+    background-color: transparent;
     border-radius: 0;
+    cursor: pointer;
   }
 
   input[type="range"]::-ms-fill-lower {
     width: 100%;
     height: 0;
-    cursor: pointer;
-    background: transparent;
+    background-color: transparent;
     border-radius: 0;
+    cursor: pointer;
   }
 
   input[type="range"]:focus::-ms-fill-lower {
-    background: transparent;
+    background-color: transparent;
   }
 
   input[type="range"]::-ms-fill-upper {
     width: 100%;
     height: 0;
-    cursor: pointer;
-    background: transparent;
+    background-color: transparent;
     border-radius: 0;
+    cursor: pointer;
   }
 
   input[type="range"]:focus::-ms-fill-upper {
-    background: transparent;
+    background-color: transparent;
   }
 
   input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 34px;
     width: 34px;
-    background: @bg-ligthgreen;
+    margin-top: -18px;
+    background-color: @bg-ligthgreen;
     border: 13px solid @bg-white;
     border-radius: 50%;
     cursor: pointer;
-    margin-top: -18px;
     box-shadow: 1px 2px 2px @bg-darkgrey, 0 2px 5px @bg-darkgrey;
 
     &:hover {
@@ -442,33 +433,33 @@ input[type="range"]:focus::-ms-fill-upper {
 
     &:active,
     &:focus {
-      height: 33px;
       width: 33px;
+      height: 33px;
       border: 12px solid @bg-white;
-      box-shadow: 0 0 0 2px @bg-ligthgreen;
+      box-shadow: 0 0 0 2px @bg-ligthgreen, 0 4px 6px rgba(0, 0, 0, 0.4);
     }
   }
 
   input[type="range"]::-moz-range-thumb {
-    height: 34px;
     width: 34px;
-    background: @bg-ligthgreen;
+    height: 34px;
+    margin-top: -14px;
+    background-color: @bg-ligthgreen;
     border: 13px solid @bg-white;
     border-radius: 50%;
-    cursor: pointer;
-    margin-top: -14px;
     box-shadow: 1px 2px 2px @bg-darkgrey, 0 2px 5px @bg-darkgrey;
+    cursor: pointer;
   }
 
   input[type="range"]::-ms-thumb {
-    height: 34px;
     width: 34px;
-    background: @bg-ligthgreen;
+    height: 34px;
+    margin-top: -14px;
+    background-color: @bg-ligthgreen;
     border: 13px solid @bg-white;
     border-radius: 50%;
-    cursor: pointer;
-    margin-top: -14px;
     box-shadow: 1px 2px 2px @bg-darkgrey, 0 2px 5px @bg-darkgrey;
+    cursor: pointer;
   }
 }
 
@@ -485,26 +476,24 @@ input[type="range"]:focus::-ms-fill-upper {
   .example-wrapper {
     display: flex;
     flex-direction: column;
-    background-color: @bg-lightgrey;
     width: 550px;
     padding-left: 40px;
     padding-right: 0;
+    background-color: @bg-lightgrey;
   }
 
   .example__title {
-    background-color: @bg-white;
-
     margin-left: 40px;
     margin-bottom: 52px;
+    background-color: @bg-white;
   }
 
   .example__description {
+    width: 435px;
     margin: 0;
     margin-top: 70px;
     margin-bottom: 69px;
     padding: 0;
-
-    width: 435px;
   }
 
   .example__stat-wrapper {
@@ -515,16 +504,15 @@ input[type="range"]:focus::-ms-fill-upper {
     margin: 0;
     margin-right: 42px;
     padding: 16px 56px;
-
     font-size: 30px;
     line-height: 37px;
     border: 1px solid @bg-darkgrey;
     border-radius: 2px;
 
     &:last-of-type {
-      padding: 16px 29px;
       margin-left: 0;
       margin-right: 20px;
+      padding: 16px 29px;
     }
   }
 
@@ -549,12 +537,12 @@ input[type="range"]:focus::-ms-fill-upper {
   .example__cost {
     position: static;
     width: 330px;
-    text-align: left;
-    padding: 0;
     margin: 0;
     margin-bottom: 76px;
+    padding: 0;
     font-size: 20px;
     line-height: 20px;
+    text-align: left;
   }
 
   .example__spacing {
@@ -566,23 +554,19 @@ input[type="range"]:focus::-ms-fill-upper {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-color: @bg-lightgrey; /* Два разных цвета фона и две кошки */
     margin: 0;
     width: 750px;
-
     height: 462px;
+    background-color: @bg-lightgrey; /* Два разных цвета фона и две кошки */
   }
 
   .example__image {
     position: absolute;
     top: -190px;
-    right: 0;
     left: 37px;
-    bottom: 0;
-    margin: 0;
     width: 690px;
     min-height: 517px;
-
+    margin: 0;
     background-image: url("../img/before-desktop@1x.png");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -601,13 +585,11 @@ input[type="range"]:focus::-ms-fill-upper {
   }
 
   .example__range {
+    margin-top: 0;
     font-size: 20px;
     line-height: 20px;
-
     border-bottom: 1px dotted @bg-darkgrey;
     padding-bottom: 5px;
-    margin-top: 0;
-
 
     &:hover {
       border-bottom: 1px solid @bg-bluishblack;

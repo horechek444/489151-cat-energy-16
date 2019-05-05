@@ -1,6 +1,6 @@
 .report {
-  margin: 0 auto;
   width: 320px;
+  margin: 0 auto;
 }
 
 .report__banner {
@@ -10,13 +10,12 @@
 }
 
 .report__product {
+  z-index: 5;
   width: 100%;
   min-height: 270px;
-
   background-image: url("../img/index-can-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: 20px 0;
-  z-index: 5;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/index-can-mobile@2x.png");
@@ -30,14 +29,12 @@
   position: absolute;
   top: 0;
   left: 0;
-
+  z-index: -2;
   width: 320px;
   height: 305px;
-
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  z-index: -2;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/index-background-mobile@2x.jpg");
@@ -49,10 +46,9 @@
   margin: 0;
   padding: 0;
   padding-top: 28px;
-
+  font-weight: 400;
   font-size: 36px;
   line-height: 36px;
-  font-weight: 400;
   text-align: center;
   color: @bg-white;
 }
@@ -62,10 +58,9 @@
   margin-top: 21px;
   margin-bottom: 28px;
   padding: 0;
-
+  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  font-weight: 400;
   text-align: center;
   color: @bg-white;
   text-transform: uppercase;
@@ -89,13 +84,10 @@
     flex-direction: column;
     justify-content: flex-start;
     position: relative;
+    width: 768px;
     margin: 0 auto;
-
     padding-top: 56px;
     padding-left: 116px;
-
-    width: 768px;
-
     background-image: none;
     background-position: 100px 1px;
   }
@@ -108,14 +100,12 @@
     position: absolute;
     top: 258px;
     left: 29px;
-
+    z-index: 0;
     width: 709px;
     height: 609px;
-
     background-image: url("../img/index-can-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
-    z-index: 0;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/index-can-tablet@2x.jpg");
@@ -124,16 +114,14 @@
   }
 
   .report__slogan {
+    width: 415px;
     margin: 0;
     margin-top: 2px;
     margin-bottom: 41px;
     padding: 0;
-
-    width: 415px;
-
+    font-weight: 400;
     font-size: 60px;
     line-height: 60px;
-    font-weight: 400;
     text-align: left;
     color: @bg-almostblack;
   }
@@ -141,12 +129,11 @@
   .report__intro {
     margin: 0;
     margin-left: 2px;
-    padding: 0;
     margin-bottom: 48px;
-
+    padding: 0;
+    font-weight: 400;
     font-size: 20px;
     line-height: 20px;
-    font-weight: 400;
     text-align: left;
     color: @bg-almostblack;
     text-transform: uppercase;
@@ -154,13 +141,12 @@
 
   .report .report__button {
     position: relative;
+    z-index: 5;
+    width: 192px;
     margin-left: 119px;
     padding: 16px 25px;
-    width: 192px;
-
     font-size: 20px;
     line-height: 20px;
-    z-index: 5;
   }
 }
 
@@ -177,10 +163,9 @@
 
   .report__banner {
     position: relative;
-
+    width: 1181px;
     padding-top: 107px;
     padding-left: 119px;
-    width: 1181px;
   }
 
   .report__background {
@@ -188,14 +173,12 @@
     position: absolute;
     top: -113px;
     left: 649px;
-
+    z-index: -10;
     width: 720px;
     height: 696px;
-
     background-image: url("../img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
-    z-index: -10;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/index-background-desktop@2x.jpg");
@@ -207,10 +190,8 @@
     position: absolute;
     top: 30px;
     left: 490px;
-
     width: 552px;
     height: 499px;
-
     background-image: url("../img/index-can-desktop@1x.png");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -222,11 +203,10 @@
   }
 
   .report .report__button {
+    z-index: 10;
     padding: 16px 27px;
-
     font-size: 20px;
     line-height: 20px;
-    z-index: 10;
   }
 
   .report__slogan {

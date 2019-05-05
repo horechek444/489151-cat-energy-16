@@ -1,9 +1,9 @@
 .optional-goods {
   position: relative;
-  margin: 0 auto;
   width: 320px;
-  background-color: @bg-white;
+  margin: 0 auto;
   padding-top: 28px;
+  background-color: @bg-white;
 }
 
 .optional-goods__main-title {
@@ -12,33 +12,34 @@
   margin-left: 19px;
   margin-bottom: 34px;
   padding: 0;
-
-  color: @bg-almostblack;
-  font-size: 24px;
   font-weight: 400;
+  font-size: 24px;
   line-height: 24px;
+  color: @bg-almostblack;
 
   &::after {
     content: "";
-
     position: absolute;
     top: 14px;
     right: 0;
-
     width: 53px;
     height: 3px;
     background-color: @bg-ligthgreen;
   }
 }
 
+.optional-goods__box {
+  margin-bottom: 363px;
+  padding-left: 20px;
+}
+
 .optional-goods__list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  .list-reset();
-  margin: 0 auto;
   width: 280px;
-  margin-bottom: 363px;
+  margin: 0 auto;
+  .list-reset();
 }
 
 .optional-goods__item {
@@ -52,10 +53,10 @@
 .optional-goods__title {
   margin-top: 13px;
   margin-bottom: 13px;
-  color: @bg-blackbrown;
-  font-size: 16px;
   font-weight: 400;
+  font-size: 16px;
   line-height: 16px;
+  color: @bg-blackbrown;
   text-transform: uppercase;
 }
 
@@ -69,51 +70,46 @@
 .optional-goods__property {
   margin: 0;
   padding: 0;
-
-  color: @bg-bluishblack;
-  font-family: "Arial MT", sans-serif;
   font-size: 14px;
-  font-weight: 400;
   line-height: 14px;
+  font-family: "Arial MT", sans-serif;
+  color: @bg-bluishblack;
   letter-spacing: -0.1px;
 }
 
 .optional-goods__description {
   position: relative;
+  width: 165px;
   margin-top: 187px;
   margin-left: 59px;
-
-  width: 165px;
-  color: @bg-white;
-  font-family: "Arial MT", sans-serif;
-  font-size: 16px;
   font-weight: 400;
+  font-size: 16px;
   line-height: 20px;
+  font-family: "Arial MT", sans-serif;
+  color: @bg-white;
   text-align: center;
 }
 
 .optional-goods__gift {
-  fill: @bg-white;
   position: absolute;
   top: 65px;
   left: 113px;
   z-index: 5;
+  fill: @bg-white;
 }
 
 .optional-goods__order {
-  padding: 10px 109px;
   margin-top: 15px;
   margin-bottom: 17px;
+  padding: 10px 109px;
 }
 
 .optional-goods__image {
   position: absolute;
   top: 642px;
   left: 20px;
-
   width: 280px;
   height: 289px;
-
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -136,17 +132,14 @@
     margin-left: 67px;
     margin-bottom: 80px;
     padding: 0;
-
     font-size: 36px;
     line-height: 36px;
 
     &::before {
       content: "";
-
       position: absolute;
       top: 21px;
       left: -67px;
-
       width: 28px;
       height: 3px;
       background-color: @bg-ligthgreen;
@@ -154,22 +147,25 @@
 
     &::after {
       content: "";
-
       position: absolute;
       top: 21px;
       right: 0;
-
       width: 327px;
       height: 3px;
       background-color: @bg-ligthgreen;
     }
   }
 
+  .optional-goods__box {
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+
   .optional-goods__list {
     width: 708px;
-    padding: 0;
     margin: 0 auto;
     margin-bottom: 345px;
+    padding: 0;
   }
 
   .optional-goods__title {
@@ -187,7 +183,6 @@
   .optional-goods__property {
     margin: 0;
     padding: 0;
-
     font-size: 16px;
     line-height: 20px;
 
@@ -202,17 +197,17 @@
   }
 
   .optional-goods__item {
-    border: 1px solid @bg-darkgrey;
-    border-bottom: none;
     margin: 0;
     padding: 27px 37px;
     padding-bottom: 28px;
+    border: 1px solid @bg-darkgrey;
+    border-bottom: none;
   }
 
   .optional-goods__order {
-    padding: 10px 286px;
     margin-top: 23px;
     margin-bottom: 0;
+    padding: 10px 286px;
   }
 
   .optional-goods__description {
@@ -223,21 +218,19 @@
   }
 
   .optional-goods__gift {
-    fill: @bg-white;
     position: absolute;
     top: 65px;
     left: 91px;
     z-index: 5;
+    fill: @bg-white;
   }
 
   .optional-goods__image {
     position: absolute;
     top: 742px;
     left: 30px;
-
     width: 708px;
     height: 200px;
-
     background-image: url("../img/gift-photo-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -261,7 +254,6 @@
     margin-bottom: 79px;
     margin-left: 40px;
     padding: 0;
-
     font-size: 36px;
     line-height: 36px;
 
@@ -271,11 +263,9 @@
 
     &::after {
       content: "";
-
       position: absolute;
       top: 21px;
       right: 0;
-
       width: 888px;
       height: 3px;
       background-color: @bg-ligthgreen;
@@ -284,9 +274,9 @@
 
   .optional-goods__list {
     width: 896px;
-    padding: 0;
     margin: 0;
     margin-left: 40px;
+    padding: 0;
   }
 
   .optional-goods__title {
@@ -298,15 +288,14 @@
   .optional-goods__properties {
     display: flex;
     justify-content: space-between;
-    width: 288px;
     align-self: center;
+    width: 288px;
     margin-top: 6px;
   }
 
   .optional-goods__property {
     margin: 0;
     padding: 0;
-
     font-size: 16px;
     line-height: 20px;
   }
@@ -322,18 +311,18 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 896px;
+    padding: 0;
     border: none;
     border-top: 1px solid @bg-darkgrey;
-    padding: 0;
-    width: 896px;
   }
 
   .optional-goods__order {
-    padding: 10px 92px;
     margin-top: 15px;
     margin-bottom: 16px;
     margin-left: 39px;
     margin-right: 0;
+    padding: 10px 92px;
   }
 
   .optional-goods__description {
@@ -345,21 +334,19 @@
   }
 
   .optional-goods__gift {
-    fill: @bg-white;
     position: absolute;
     top: 65px;
     left: 96px;
     z-index: 5;
+    fill: @bg-white;
   }
 
   .optional-goods__image {
     position: absolute;
     top: 115px;
     left: 1015px;
-
     width: 245px;
     height: 289px;
-
     background-image: url("../img/gift-photo-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
