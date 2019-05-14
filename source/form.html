@@ -69,20 +69,29 @@
               </div>
             </fieldset>
 
-            <fieldset class="program-selection__wrapper program-selection__radio">
+            <fieldset class="program-selection__wrapper program-selection__radio-wrap">
               <legend class="visually-hidden"><h3>Выбор типа корректировки веса:</h3></legend>
               <ul class="program-selection__list program-selection__border">
                 <li class="program-selection__item radio__item">
-                  <input class="visually-hidden filter-radio" id="filter__slim" type="radio" name="final-result" value="slim" checked>
-                  <label class="program-selection__label" for="filter__slim">Похудение</label>
+                  <label class="program-selection__label" for="filter__slim">
+                    <input class="program-selection__input" id="filter__slim" type="radio" name="final-result" value="slim" checked disabled>
+                    <span class="program-selection__radio"></span>
+                    <span class="program-selection__radio-name">Похудение</span>
+                  </label>
                 </li>
                 <li class="program-selection__item radio__item">
-                  <input class="visually-hidden filter-radio" id="filter__weight-gain"  type="radio" name="final-result" value="weight-gain">
-                  <label class="program-selection__label" for="filter__weight-gain">Набор массы</label>
+                  <label class="program-selection__label" for="filter__weight-gain">
+                    <input class="visually-hidden filter-radio" id="filter__weight-gain"  type="radio" name="final-result" value="weight-gain">
+                    <span class="program-selection__radio"></span>
+                    <span class="program-selection__radio-name">Набор массы</span>
+                  </label>
                 </li>
                 <li class="program-selection__item radio__item">
-                  <input class="visually-hidden filter-radio" id="filter__unknown"  type="radio" name="final-result" value="unknown">
-                  <label class="program-selection__label" for="filter__unknown">Не знаю (нужен ваш совет)</label>
+                  <label class="program-selection__label" for="filter__unknown">
+                    <input class="visually-hidden filter-radio" id="filter__unknown"  type="radio" name="final-result" value="unknown">
+                    <span class="program-selection__radio"></span>
+                    <span class="program-selection__radio-name">Не знаю (нужен ваш совет)</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -117,31 +126,31 @@
             <legend class="program-selection__legend legend-optionally">Дополнительно</legend>
             <ul class="program-selection__list program-selection__optionally">
               <li class="citem checkbox__item">
-                <input class="program-selection__input" id="filter__sweetener" type="checkbox" name="sweetener" checked>
                 <label class="program-selection__label" for="filter__sweetener">
+                  <input class="program-selection__input" id="filter__sweetener" type="checkbox" name="sweetener" checked disabled>
                   <span class="program-selection__checkbox"></span>
-                  Сахарозаменитель
+                  <span class="program-selection__checkbox-name">Сахарозаменитель</span>
                 </label>
               </li>
               <li class="program-selection__item checkbox__item">
-                <input class="program-selection__input" id="filter__water" type="checkbox" name="water">
                 <label class="program-selection__label" for="filter__water">
+                  <input class="program-selection__input" id="filter__water" type="checkbox" name="water">
                   <span class="program-selection__checkbox"></span>
-                  Питьевая вода
+                  <span class="program-selection__checkbox-name">Питьевая вода</span>
                 </label>
               </li>
               <li class="program-selection__item checkbox__item">
-                <input class="program-selection__input" id="filter__milk" type="checkbox" name="milk">
                 <label class="program-selection__label" for="filter__milk">
+                  <input class="program-selection__input" id="filter__milk" type="checkbox" name="milk">
                   <span class="program-selection__checkbox"></span>
-                  Молоко
+                  <span class="program-selection__checkbox-name">Молоко</span>
                 </label>
               </li>
               <li class="program-selection__item checkbox__item">
-                <input class="program-selection__input" id="filter__vitamins" type="checkbox" name="vitamins">
                 <label class="program-selection__label" for="filter__vitamins">
+                  <input class="program-selection__input" id="filter__vitamins" type="checkbox" name="vitamins">
                   <span class="program-selection__checkbox"></span>
-                  Витамины
+                  <span class="program-selection__checkbox-name">Витамины</span>
                 </label>
               </li>
             </ul>
