@@ -56,7 +56,10 @@
   text-transform: uppercase;
 }
 
-input[type] {
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="text"] {
   height: 42px;
   padding-left: 13px;
   font-weight: 400;
@@ -332,11 +335,14 @@ input[type="tel"]:active + .program-selection__phone {
   .list-reset();
 }
 
-input[type="checkbox"] {
-  display: none;
+.checkbox__item .program-selection__input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearence: none;
 }
 
-input[type="checkbox"] + label {
+.checkbox__item .program-selection__label {
   position: relative;
   display: block;
   height: 14px;
@@ -345,7 +351,7 @@ input[type="checkbox"] + label {
   user-select: none;
 }
 
-input[type="checkbox"] + label::before {
+.program-selection__checkbox {
   content: "";
   position: absolute;
   left: -46px;
@@ -355,7 +361,7 @@ input[type="checkbox"] + label::before {
   border: 1px solid @bg-darkgrey;
 }
 
-input[type="checkbox"]:checked + label::after {
+input[type="checkbox"]:checked + .program-selection__checkbox {
   content: "";
   position: absolute;
   left: -41px;
@@ -367,16 +373,16 @@ input[type="checkbox"]:checked + label::after {
   background-position: 0 0;
 }
 
-input[type="checkbox"]:disabled + label {
+input[type="checkbox"]:disabled + .program-selection__checkbox {
   opacity: 0.3;
 }
 
-input[type="checkbox"]:hover + label::before,
-input[type="checkbox"]:focus + label::before {
+input[type="checkbox"]:hover + .program-selection__checkbox,
+input[type="checkbox"]:focus + .program-selection__checkbox {
   border-color: @bg-darklygrey;
 }
 
-input[type="checkbox"]:active + label {
+input[type="checkbox"]:active + .program-selection__checkbox {
   border-color: @bg-darklygrey;
   opacity: 0.3;
 }
