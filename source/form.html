@@ -15,30 +15,30 @@
     </div>
 
     <header class="page-header">
-        <a class="page-header__logo" href="index.html">
-          <picture>
-            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Магазин питания для котов «Cat energy»">
-          </picture>
-        </a>
+      <a class="page-header__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Магазин питания для котов «Cat energy»">
+        </picture>
+      </a>
 
-        <nav class="main-nav main-nav--closed main-nav--nojs">
-          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list">
-              <li class="main-nav__item ">
-                <a href="index.html">Главная</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="catalog.html">Каталог продукции</a>
-              </li>
-              <li class="main-nav__item main-nav__item--active">
-                <a>Подбор программы</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item ">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item main-nav__item--active">
+              <a>Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <main class="page-main">
@@ -49,8 +49,8 @@
 
         <h2 class="program-selection__main-title">Подбор программы</h2>
         <p class="program-selection__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
-        <div class="program-selection__case program-selection__profile">
-          <form action="https://echo.htmlacademy.ru" method="get">
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <div class="program-selection__case program-selection__profile">
             <fieldset class="program-selection__wrapper">
               <legend class="visually-hidden"><h3>Анкета:</h3></legend>
               <div class="program-selection__box">
@@ -68,9 +68,7 @@
                 </p>
               </div>
             </fieldset>
-          </form>
 
-          <form action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="program-selection__wrapper program-selection__radio">
               <legend class="visually-hidden"><h3>Выбор типа корректировки веса:</h3></legend>
               <ul class="program-selection__list program-selection__border">
@@ -88,16 +86,14 @@
                 </li>
               </ul>
             </fieldset>
-          </form>
-        </div>
+          </div>
 
-        <form action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="program-selection__wrapper email__wrapper">
             <legend class="program-selection__legend legend-contact">Контактные данные (владельца кота)</legend>
             <div class="program-selection__case program-selection__contact">
               <p>
                 <label class="program-selection__label" for="email">E-mail:*</label>
-                <input class="program-selection__user" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                <input class="program-selection__user program-selection__error" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
                 <svg class="program-selection__email" width="17" height="13">
                   <use xlink:href="#icon-mail"></use>
                 </svg>
@@ -111,16 +107,12 @@
               </p>
             </div>
           </fieldset>
-        </form>
 
-        <form action="https://echo.htmlacademy.ru" method="get">
           <div class="program-selection__comment">
             <label class="program-selection__legend legend-comment" for="comment__text">Комментарий</label>
             <textarea class="program-selection__user" id="comment__text" name="comment" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
-        </form>
 
-        <form action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="program-selection__wrapper optionally-wrapper">
             <legend class="program-selection__legend legend-optionally">Дополнительно</legend>
             <ul class="program-selection__list program-selection__optionally">
@@ -142,12 +134,13 @@
               </li>
             </ul>
           </fieldset>
-        </form>
 
-        <div class="program-selection__skin">
-          <button class="program-selection__button button" type="submit">Отправить заявку</button>
-          <p class="program-selection__necessary">* &#8212; Обязательные поля</p>
-        </div>
+
+          <div class="program-selection__skin">
+            <button class="program-selection__button button" type="submit">Отправить заявку</button>
+            <p class="program-selection__necessary">* &#8212; Обязательные поля</p>
+          </div>
+        </form>
       </section>
 
       <section class="contacts">
