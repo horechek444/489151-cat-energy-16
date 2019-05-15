@@ -5,6 +5,10 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
+    <link rel="preload" href="fonts/oswaldregular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/oswaldmedium.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
@@ -52,7 +56,7 @@
         <form action="https://echo.htmlacademy.ru" method="get">
           <div class="program-selection__case program-selection__profile">
             <fieldset class="program-selection__wrapper">
-              <legend class="visually-hidden"><h3>Анкета:</h3></legend>
+              <legend class="visually-hidden">Анкета:</legend>
               <div class="program-selection__box">
                 <p>
                   <label class="program-selection__label" for="login">Имя:* </label>
@@ -70,25 +74,25 @@
             </fieldset>
 
             <fieldset class="program-selection__wrapper program-selection__radio-wrap">
-              <legend class="visually-hidden"><h3>Выбор типа корректировки веса:</h3></legend>
+              <legend class="visually-hidden">Выбор типа корректировки веса:</legend>
               <ul class="program-selection__list program-selection__border">
                 <li class="program-selection__item radio__item">
                   <label class="program-selection__label" for="filter__slim">
-                    <input class="program-selection__input" id="filter__slim" type="radio" name="final-result" value="slim" checked disabled>
+                    <input class="program-selection__input" id="filter__slim" type="radio" name="final-result" value="slim">
                     <span class="program-selection__radio"></span>
                     <span class="program-selection__radio-name">Похудение</span>
                   </label>
                 </li>
                 <li class="program-selection__item radio__item">
                   <label class="program-selection__label" for="filter__weight-gain">
-                    <input class="visually-hidden filter-radio" id="filter__weight-gain"  type="radio" name="final-result" value="weight-gain">
+                    <input class="program-selection__input" id="filter__weight-gain"  type="radio" name="final-result" value="weight-gain">
                     <span class="program-selection__radio"></span>
                     <span class="program-selection__radio-name">Набор массы</span>
                   </label>
                 </li>
                 <li class="program-selection__item radio__item">
                   <label class="program-selection__label" for="filter__unknown">
-                    <input class="visually-hidden filter-radio" id="filter__unknown"  type="radio" name="final-result" value="unknown">
+                    <input class="program-selection__input" id="filter__unknown"  type="radio" name="final-result" value="unknown" checked disabled>
                     <span class="program-selection__radio"></span>
                     <span class="program-selection__radio-name">Не знаю (нужен ваш совет)</span>
                   </label>
@@ -174,14 +178,14 @@
             </div>
           </div>
         </div>
-        <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A8c580b36218e042ad56d5d5fa502ab0084cab42e17d5a9eab108572be70a1daf&amp;source=constructor" width="100%" height="362" frameborder="0"></iframe>
+        <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A8c580b36218e042ad56d5d5fa502ab0084cab42e17d5a9eab108572be70a1daf&amp;source=constructor" width="320" height="362"></iframe>
         <div class="contacts__map-image"></div>
       </section>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__logo-name">
-        <a href="#">
+        <a href="index.html">
           <svg class="page-footer__logo-image" width="128" height="24">
             <use xlink:href="#icon-logo-footer"></use>
           </svg>

@@ -52,14 +52,19 @@
 
 .contacts__map {
   position: relative;
-  z-index: 2;
-  margin-bottom: -3px; /* внизу после карты появились лишние 3px, margin и padding нет */
+  z-index: 5;
+  margin-bottom: -3px;
+  border: none;
 }
 
+//.contacts-place {
+//  margin-bottom: 362px;
+//}
+
 .contacts__map-image {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  //top: 114px;
+  //left: 0;
   width: 320px;
   height: 362px;
   margin: 0 auto;
@@ -71,6 +76,25 @@
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/bg-map-mobile@2x.png");
     background-size: 320px auto;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 130px;
+    top: 138px;
+    width: 60px;
+    height: 53px;
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 60px 53px;
+    z-index: -2;
+
+    @media (min-width: 320px) {
+      background-image: url("../img/map-pin.webp");
+      background-size: 60px 53px;
+    }
   }
 }
 
@@ -115,6 +139,7 @@
   .contacts__map {
     position: relative;
     z-index: 2;
+    width: @tablet-width;
     height: 396px;
   }
 
@@ -175,6 +200,7 @@
   .contacts__map {
     position: relative;
     z-index: 2;
+    width: @desktop-width;
     height: 399px;
   }
 

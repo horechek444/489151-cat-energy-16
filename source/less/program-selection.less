@@ -192,7 +192,6 @@ input[type="radio"]:checked + .program-selection__radio::after {
   width: 12px;
   height: 12px;
   background-color: @bg-ligthgreen;
-  background-size: 12px 12px;
   border-radius: 50%;
 }
 
@@ -444,7 +443,10 @@ input[type="checkbox"]:disabled ~ .program-selection__checkbox-name {
     line-height: 30px;
   }
 
-  input[type] {
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="text"] {
     height: 50px;
     padding-left: 19px;
     font-size: 20px;
@@ -489,7 +491,7 @@ input[type="checkbox"]:disabled ~ .program-selection__checkbox-name {
     border: 1px solid rgba(205, 205, 205, 0.5);
   }
 
-  input[type="radio"] + label {
+  .radio__item .program-selection__label {
     position: relative;
     display: block;
     margin: 0;
@@ -498,7 +500,7 @@ input[type="checkbox"]:disabled ~ .program-selection__checkbox-name {
     user-select: none;
   }
 
-  input[type="radio"] + label::before {
+  .program-selection__radio {
     content: "";
     position: absolute;
     left: -60px;
@@ -509,11 +511,11 @@ input[type="checkbox"]:disabled ~ .program-selection__checkbox-name {
     border-radius: 50%;
   }
 
-  input[type="radio"]:checked + label::after {
+  input[type="radio"]:checked + .program-selection__radio::after {
     content: "";
     position: absolute;
-    left: -49px;
-    top: 2px;
+    left: 10px;
+    top: 10px;
     width: 18px;
     height: 18px;
     background-color: @bg-ligthgreen;
@@ -665,7 +667,7 @@ input[type="checkbox"]:disabled ~ .program-selection__checkbox-name {
     .list-reset();
   }
 
-  input[type="checkbox"] + label {
+  .checkbox__item .program-selection__label {
     position: relative;
     display: block;
     width: 160px;
@@ -673,11 +675,7 @@ input[type="checkbox"]:disabled ~ .program-selection__checkbox-name {
     user-select: none;
   }
 
-  .checkbox__item:nth-child(2n) label {
-    margin-right: 0;
-  }
-
-  input[type="checkbox"] + label::before {
+  .program-selection__checkbox {
     content: "";
     position: absolute;
     left: -57px;
@@ -687,16 +685,26 @@ input[type="checkbox"]:disabled ~ .program-selection__checkbox-name {
     border: 1px solid @bg-darkgrey;
   }
 
-  input[type="checkbox"]:checked + label::after {
-    content: "";
-    position: absolute;
-    left: -46px;
-    top: 3px;
-    width: 21px;
-    height: 16px;
+  input[type="checkbox"]:checked + .program-selection__checkbox {
     background-image: url("../img/tick.svg");
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: 50% 50%;
+    background-size: 21px 16px;
+  }
+
+  input[type="checkbox"]:hover + .program-selection__checkbox,
+  input[type="checkbox"]:focus + .program-selection__checkbox,
+  input[type="checkbox"]:active + .program-selection__checkbox {
+    border-color: @bg-darklygrey;
+  }
+
+  input[type="checkbox"]:disabled + .program-selection__checkbox,
+  input[type="checkbox"]:disabled ~ .program-selection__checkbox-name {
+    opacity: 0.3;
+  }
+
+  .checkbox__item:nth-child(2n) label {
+    margin-right: 0;
   }
 
   .program-selection__skin {
@@ -947,7 +955,7 @@ input[type="checkbox"]:disabled ~ .program-selection__checkbox-name {
     .list-reset();
   }
 
-  input[type="checkbox"] + label {
+  .checkbox__item .program-selection__label {
     position: relative;
     display: block;
     width: auto;
