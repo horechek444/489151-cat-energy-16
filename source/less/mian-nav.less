@@ -89,14 +89,19 @@
     min-height: 0;
   }
 
-  .main-nav--nojs .site-list__item {
+  .main-nav--nojs .main-nav__wrapper {
+    position: static;
+    min-height: 198px;
+  }
+
+  .main-nav--nojs .main-nav__item {
     display: block;
   }
 }
 
 @media (min-width: @tablet-width) {
   .main-nav {
-    width: 471px;
+    width: 500px;
     margin: 0;
     font-size: 18px;
     line-height: 25px;
@@ -120,7 +125,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 471px;
-    margin-top: 43px;
+    margin-top: 19px;
   }
 
   .main-nav__item:last-child {
@@ -154,14 +159,14 @@
 
 @media (min-width: @desktop-width) {
   .main-nav {
-    width: 517px;
+    width: 560px;
     font-size: 20px;
     line-height: 25px;
   }
 
   .main-nav__list {
     width: 517px;
-    margin-top: 74px;
+    margin-top: 20px;
   }
 
   .main-nav__item {

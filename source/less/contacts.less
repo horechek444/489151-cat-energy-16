@@ -52,8 +52,14 @@
 
 .contacts__map {
   position: relative;
-  z-index: 2;
-  margin-bottom: -3px; /* внизу после карты появились лишние 3px, margin и padding нет */
+  z-index: 5;
+  margin-bottom: -3px;
+  border: none;
+}
+
+.contacts__map-wrap {
+  position: relative;
+  height: 362px;
 }
 
 .contacts__map-image {
@@ -66,11 +72,30 @@
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: 0 -38px;
-  z-index: -2;
+  z-index: 0;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/bg-map-mobile@2x.png");
     background-size: 320px auto;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 130px;
+    top: 138px;
+    width: 60px;
+    height: 53px;
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 60px 53px;
+    z-index: 0;
+
+    @media (min-width: 320px) {
+      background-image: url("../img/map-pin.webp");
+      background-size: 60px 53px;
+    }
   }
 }
 
@@ -114,7 +139,13 @@
 
   .contacts__map {
     position: relative;
-    z-index: 2;
+    z-index: 5;
+    width: @tablet-width;
+    height: 396px;
+  }
+
+  .contacts__map-wrap {
+    position: relative;
     height: 396px;
   }
 
@@ -132,6 +163,25 @@
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-map-tablet@2x.png");
       background-size: @tablet-width auto;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 326px;
+      top: 146px;
+      width: 115px;
+      height: 106px;
+      background-image: url("../img/map-pin.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 115px 106px;
+      z-index: 0;
+
+      @media (min-width: 768px) {
+        background-image: url("../img/map-pin.webp");
+        background-size: 115px 106px;
+      }
     }
   }
 }
@@ -174,7 +224,13 @@
 
   .contacts__map {
     position: relative;
-    z-index: 2;
+    z-index: 5;
+    width: @desktop-width;
+    height: 399px;
+  }
+
+  .contacts__map-wrap {
+    position: relative;
     height: 399px;
   }
 
@@ -190,6 +246,25 @@
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-map-desktop@2x.png");
       background-size: @desktop-width auto;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 932px;
+      top: 150px;
+      width: 115px;
+      height: 106px;
+      background-image: url("../img/map-pin.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 115px 106px;
+      z-index: 0;
+
+      @media (min-width: 1300px) {
+        background-image: url("../img/map-pin.webp");
+        background-size: 115px 106px;
+      }
     }
   }
 }

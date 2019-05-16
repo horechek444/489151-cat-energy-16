@@ -56,7 +56,10 @@
   text-transform: uppercase;
 }
 
-input[type] {
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="text"] {
   height: 42px;
   padding-left: 13px;
   font-weight: 400;
@@ -78,10 +81,10 @@ input[type] {
     border: 2px solid @bg-bluishblack;
     outline: none;
   }
+}
 
-  //&:invalid {
-  //  border: 2px solid @bg-errorform;
-  //}
+.program-selection__case .program-selection__error {
+  border: 2px solid @bg-errorform;
 }
 
 ::-webkit-input-placeholder {
@@ -98,22 +101,6 @@ input[type] {
 
 :-ms-input-placeholder {
   color: @bg-bluishblack;
-}
-
-input[type="range"] {
-  width: 84px;
-  height: 14px;
-  padding-left: 6px;
-  background-color: @bg-white;
-  border: 1px solid @bg-darkgrey;
-  border-radius: 6px;
-  box-sizing: border-box;
-
-  &:focus,
-  &:active {
-    border: none;
-    outline: none;
-  }
 }
 
 input[type="text"] {
@@ -166,11 +153,11 @@ input[name="phone"] {
   border: 1px solid rgba(205, 205, 205, 0.5);
 }
 
-input[type="radio"] {
-  display: none;
+.program-selection__radio-wrap {
+  margin-bottom: 28px;
 }
 
-input[type="radio"] + label {
+.radio__item .program-selection__label {
   position: relative;
   display: block;
   margin: 0;
@@ -179,43 +166,35 @@ input[type="radio"] + label {
   user-select: none;
 }
 
-.program-selection__radio {
-  margin-bottom: 28px;
-}
-
-input[type="radio"] + label::before {
+input[type="radio"] + .program-selection__label::before {
   content: "";
   position: absolute;
   left: -46px;
   top: -8px;
-  width: 29px;
-  height: 29px;
+  width: 30px;
+  height: 30px;
   border: 1px solid @bg-darkgrey;
   border-radius: 50%;
+  box-sizing: border-box;
 }
 
-input[type="radio"]:checked + label::after {
+input[type="radio"]:checked + .program-selection__label::after {
   content: "";
   position: absolute;
-  left: -36px;
-  top: 2px;
+  left: -37px;
+  top: 1px;
   width: 12px;
   height: 12px;
   background-color: @bg-ligthgreen;
   border-radius: 50%;
 }
 
-input[type="radio"]:disabled + label {
-  opacity: 0.3;
-}
-
-input[type="radio"]:hover + label::before,
-input[type="radio"]:focus + label::before {
+input[type="radio"] + .program-selection__label:hover::before,
+input[type="radio"]:focus + .program-selection__label::before {
   border-color: @bg-darklygrey;
 }
 
-input[type="radio"]:active + label {
-  border-color: @bg-darklygrey;
+input[type="radio"]:disabled + .program-selection__label {
   opacity: 0.3;
 }
 
@@ -265,6 +244,10 @@ input[type="email"]:active + .program-selection__email {
   fill: @bg-ligthgreen;
 }
 
+.program-selection__error + .program-selection__email {
+  fill: @bg-errorform;
+}
+
 .program-selection__phone {
   position: absolute;
   top: 87px;
@@ -274,6 +257,10 @@ input[type="email"]:active + .program-selection__email {
 input[type="tel"]:focus + .program-selection__phone,
 input[type="tel"]:active + .program-selection__phone {
   fill: @bg-ligthgreen;
+}
+
+.program-selection__error + .program-selection__phone {
+  fill: @bg-errorform;
 }
 
 .legend-contact::after {
@@ -340,11 +327,7 @@ input[type="tel"]:active + .program-selection__phone {
   .list-reset();
 }
 
-input[type="checkbox"] {
-  display: none;
-}
-
-input[type="checkbox"] + label {
+.checkbox__item .program-selection__label {
   position: relative;
   display: block;
   height: 14px;
@@ -353,7 +336,7 @@ input[type="checkbox"] + label {
   user-select: none;
 }
 
-input[type="checkbox"] + label::before {
+input[type="checkbox"] + .program-selection__label::before {
   content: "";
   position: absolute;
   left: -46px;
@@ -363,29 +346,25 @@ input[type="checkbox"] + label::before {
   border: 1px solid @bg-darkgrey;
 }
 
-input[type="checkbox"]:checked + label::after {
+input[type="checkbox"]:checked + .program-selection__label::after {
   content: "";
   position: absolute;
-  left: -41px;
+  left: -40px;
   top: 3px;
   width: 21px;
   height: 16px;
   background-image: url("../img/tick.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: 50% 50%;
+  background-size: 21px 16px;
 }
 
-input[type="checkbox"]:disabled + label {
-  opacity: 0.3;
-}
-
-input[type="checkbox"]:hover + label::before,
-input[type="checkbox"]:focus + label::before {
+input[type="checkbox"] + .program-selection__label:hover::before,
+input[type="checkbox"]:focus + .program-selection__label::before {
   border-color: @bg-darklygrey;
 }
 
-input[type="checkbox"]:active + label {
-  border-color: @bg-darklygrey;
+input[type="checkbox"]:disabled + .program-selection__label {
   opacity: 0.3;
 }
 
@@ -452,25 +431,14 @@ input[type="checkbox"]:active + label {
     line-height: 30px;
   }
 
-  input[type] {
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="text"] {
     height: 50px;
     padding-left: 19px;
     font-size: 20px;
     line-height: 20px;
-  }
-
-  input[type="range"] {
-    width: 428px;
-    height: 6px;
-    padding-left: 0;
-    background-color: @bg-gainsborough;
-    border: none;
-    border-radius: 3px;
-    box-sizing: border-box;
-
-    &:hover {
-      border: none;
-    }
   }
 
   input[name="login"] {
@@ -500,7 +468,7 @@ input[type="checkbox"]:active + label {
     .list-reset();
   }
 
-  .program-selection__radio {
+  .program-selection__radio-wrap {
     margin-bottom: 76px;
   }
 
@@ -511,7 +479,7 @@ input[type="checkbox"]:active + label {
     border: 1px solid rgba(205, 205, 205, 0.5);
   }
 
-  input[type="radio"] + label {
+  .radio__item .program-selection__label {
     position: relative;
     display: block;
     margin: 0;
@@ -520,7 +488,7 @@ input[type="checkbox"]:active + label {
     user-select: none;
   }
 
-  input[type="radio"] + label::before {
+  input[type="radio"] + .program-selection__label::before {
     content: "";
     position: absolute;
     left: -60px;
@@ -531,11 +499,11 @@ input[type="checkbox"]:active + label {
     border-radius: 50%;
   }
 
-  input[type="radio"]:checked + label::after {
+  input[type="radio"]:checked + .program-selection__label::after {
     content: "";
     position: absolute;
-    left: -49px;
-    top: 2px;
+    left: -50px;
+    top: 1px;
     width: 18px;
     height: 18px;
     background-color: @bg-ligthgreen;
@@ -687,7 +655,7 @@ input[type="checkbox"]:active + label {
     .list-reset();
   }
 
-  input[type="checkbox"] + label {
+  .checkbox__item .program-selection__label {
     position: relative;
     display: block;
     width: 160px;
@@ -695,11 +663,7 @@ input[type="checkbox"]:active + label {
     user-select: none;
   }
 
-  .checkbox__item:nth-child(2n) label {
-    margin-right: 0;
-  }
-
-  input[type="checkbox"] + label::before {
+  input[type="checkbox"] + .program-selection__label::before {
     content: "";
     position: absolute;
     left: -57px;
@@ -709,16 +673,21 @@ input[type="checkbox"]:active + label {
     border: 1px solid @bg-darkgrey;
   }
 
-  input[type="checkbox"]:checked + label::after {
+  input[type="checkbox"]:checked + .program-selection__label::after {
     content: "";
     position: absolute;
-    left: -46px;
+    left: -47px;
     top: 3px;
     width: 21px;
     height: 16px;
     background-image: url("../img/tick.svg");
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: 50% 50%;
+    background-size: 21px 16px;
+  }
+
+  .checkbox__item:nth-child(2n) label {
+    margin-right: 0;
   }
 
   .program-selection__skin {
@@ -969,7 +938,7 @@ input[type="checkbox"]:active + label {
     .list-reset();
   }
 
-  input[type="checkbox"] + label {
+  .checkbox__item .program-selection__label {
     position: relative;
     display: block;
     width: auto;
@@ -978,11 +947,11 @@ input[type="checkbox"]:active + label {
     user-select: none;
   }
 
-  .checkbox__item:nth-child(3n) label {  /* Двигаю, потому что обычное space-between очень сильно отличается от макета у 2 и 3 li */
+  .checkbox__item:nth-child(3n) label {
     margin-left: 88px;
   }
 
-  .checkbox__item:last-child {  /* Двигаю, потому что обычное space-between очень сильно отличается от макета у 2 и 3 li */
+  .checkbox__item:last-child {
     margin-right: 0;
     margin-left: 91px;
   }
