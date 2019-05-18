@@ -75,20 +75,22 @@
 
             <fieldset class="program-selection__wrapper program-selection__radio-wrap">
               <legend class="visually-hidden">Выбор типа корректировки веса:</legend>
-              <ul class="program-selection__list program-selection__border">
-                <li class="program-selection__item radio__item">
-                  <input class="visually-hidden" id="filter__slim" type="radio" name="final-result" value="slim">
-                  <label class="program-selection__label" for="filter__slim">Похудение</label>
-                </li>
-                <li class="program-selection__item radio__item">
-                  <input class="visually-hidden" id="filter__weight-gain"  type="radio" name="final-result" value="weight-gain">
-                  <label class="program-selection__label" for="filter__weight-gain">Набор массы</label>
-                </li>
-                <li class="program-selection__item radio__item">
-                  <input class="visually-hidden" id="filter__unknown"  type="radio" name="final-result" value="unknown" disabled>
-                  <label class="program-selection__label" for="filter__unknown">Не знаю (нужен ваш совет)</label>
-                </li>
-              </ul>
+              <div class="program-selection__border">
+                <ul class="program-selection__list">
+                  <li class="program-selection__item radio__item">
+                    <input class="visually-hidden" id="filter__slim" type="radio" name="final-result" value="slim">
+                    <label class="program-selection__label" for="filter__slim">Похудение</label>
+                  </li>
+                  <li class="program-selection__item radio__item">
+                    <input class="visually-hidden" id="filter__weight-gain"  type="radio" name="final-result" value="weight-gain">
+                    <label class="program-selection__label" for="filter__weight-gain">Набор массы</label>
+                  </li>
+                  <li class="program-selection__item radio__item">
+                    <input class="visually-hidden" id="filter__unknown"  type="radio" name="final-result" value="unknown" disabled>
+                    <label class="program-selection__label" for="filter__unknown">Не знаю (нужен ваш совет)</label>
+                  </li>
+                </ul>
+              </div>
             </fieldset>
           </div>
 
@@ -97,7 +99,7 @@
             <div class="program-selection__case program-selection__contact">
               <p>
                 <label class="program-selection__label" for="email">E-mail:*</label>
-                <input class="program-selection__user program-selection__error" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                <input class="program-selection__user" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
                 <svg class="program-selection__email" width="17" height="13">
                   <use xlink:href="#icon-mail"></use>
                 </svg>

@@ -37,9 +37,11 @@
 .program-selection__box {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-self: stretch;
-  min-height: 202px;
+  min-height: 167px;
+  padding-top: 18px;
+  padding-bottom: 17px;
 }
 
 .program-selection__box p {
@@ -143,13 +145,16 @@ input[name="phone"] {
 .program-selection__list {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  min-width: 253px;
+  min-height: 106px;
   .list-reset();
 }
 
 .program-selection__border {
-  min-width: 253px;
-  height: 156px;
+  height: 106px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   border: 1px solid rgba(205, 205, 205, 0.5);
 }
 
@@ -170,7 +175,7 @@ input[type="radio"] + .program-selection__label::before {
   content: "";
   position: absolute;
   left: -46px;
-  top: -8px;
+  top: -6px;
   width: 30px;
   height: 30px;
   border: 1px solid @bg-darkgrey;
@@ -182,7 +187,7 @@ input[type="radio"]:checked + .program-selection__label::after {
   content: "";
   position: absolute;
   left: -37px;
-  top: 1px;
+  top: 3px;
   width: 12px;
   height: 12px;
   background-color: @bg-ligthgreen;
@@ -198,12 +203,15 @@ input[type="radio"]:disabled + .program-selection__label {
   opacity: 0.3;
 }
 
-.program-selection__case {
+.program-selection__contact {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-self: stretch;
-  min-height: 135px;
+  min-height: 100px;
+  padding-top: 15px;
+  padding-bottom: 20px;
 }
 
 .program-selection__case p {
@@ -227,10 +235,6 @@ input[type="radio"]:disabled + .program-selection__label {
     height: 3px;
     background-color: @bg-ligthgreen;
   }
-}
-
-.program-selection__contact {
-  position: relative;
 }
 
 .program-selection__email {
@@ -280,8 +284,8 @@ input[type="tel"]:active + .program-selection__phone {
 
 .legend-comment::after {
   width: 158px;
-  top: 21px;
-  right: -183px;
+  top: 19px;
+  right: -182px;
 }
 
 .program-selection__comment textarea {
@@ -414,8 +418,10 @@ input[type="checkbox"]:disabled + .program-selection__label {
     flex-direction: column;
     justify-content: space-between;
     align-self: stretch;
-    min-height: 210px;
+    min-height: 201px;
     margin-bottom: 60px;
+    padding-top: 4px;
+    padding-bottom: 5px;
   }
 
   .program-selection__label {
@@ -464,19 +470,23 @@ input[type="checkbox"]:disabled + .program-selection__label {
   .program-selection__list {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: 628px;
+    min-height: 124px;
     .list-reset();
-  }
-
-  .program-selection__radio-wrap {
-    margin-bottom: 76px;
   }
 
   .program-selection__border {
     width: 628px;
-    height: 194px;
+    height: 124px;
     margin-left: 60px;
+    padding-top: 35px;
+    padding-bottom: 35px;
     border: 1px solid rgba(205, 205, 205, 0.5);
+  }
+
+  .program-selection__radio-wrap {
+    margin-bottom: 76px;
   }
 
   .radio__item .program-selection__label {
@@ -493,8 +503,8 @@ input[type="checkbox"]:disabled + .program-selection__label {
     position: absolute;
     left: -60px;
     top: -9px;
-    width: 38px;
-    height: 38px;
+    width: 39px;
+    height: 39px;
     border: 1px solid @bg-darkgrey;
     border-radius: 50%;
   }
@@ -510,12 +520,15 @@ input[type="checkbox"]:disabled + .program-selection__label {
     border-radius: 50%;
   }
 
-  .program-selection__case {
+  .program-selection__contact {
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-self: stretch;
-    min-height: 135px;
+    min-height: 119px;
+    padding-top: 0;
+    padding-bottom: 16px;
   }
 
   .program-selection__case p {
@@ -596,7 +609,7 @@ input[type="checkbox"]:disabled + .program-selection__label {
   }
 
   .email__wrapper {
-    margin-bottom: 65px;
+    margin-bottom: 50px;
   }
 
   .program-selection__comment textarea {
@@ -747,9 +760,11 @@ input[type="checkbox"]:disabled + .program-selection__label {
     justify-content: space-between;
     align-self: stretch;
     min-width: 568px;
-    min-height: 208px;
+    min-height: 201px;
     margin-right: 76px;
     margin-bottom: 0;
+    padding-top: 2px;
+    padding-bottom: 5px;
   }
 
   .program-selection__label {
