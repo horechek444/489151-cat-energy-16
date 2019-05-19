@@ -1,4 +1,9 @@
 .contacts {
+  width: 100%;
+  background-color: @bg-white;
+}
+
+.contacts-place {
   position: relative;
   width: 320px;
   margin: 0 auto;
@@ -59,7 +64,15 @@
 
 .contacts__map-wrap {
   position: relative;
+  width: 100%;
   height: 362px;
+}
+
+.contacts__map-aligner {
+  position: relative;
+  width: 320px;
+  height: 362px;
+  margin: 0 auto;
 }
 
 .contacts__map-image {
@@ -71,7 +84,7 @@
   margin: 0 auto;
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: 0 -38px;
+  background-position: 0 0;
   z-index: 0;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -101,7 +114,15 @@
 
 @media (min-width: @tablet-width) {
   .contacts {
+    width: 100%;
+    background-color: @bg-white;
+  }
+
+  .contacts-place {
+    position: relative;
     width: @tablet-width;
+    margin: 0 auto;
+    background-color: @bg-white;
   }
 
   .contacts__title {
@@ -146,14 +167,22 @@
 
   .contacts__map-wrap {
     position: relative;
+    width: 100%;
     height: 396px;
+  }
+
+  .contacts__map-aligner {
+    position: relative;
+    width: @tablet-width;
+    height: 396px;
+    margin: 0 auto;
   }
 
   .contacts__map-image {
     position: absolute;
     top: 0;
     left: 0;
-    width: 768px;
+    width: @tablet-width;
     min-height: 396px;
     margin: 0 auto;
     background-image: url("../img/bg-map-tablet@1x.png");
@@ -188,13 +217,13 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
-    position: relative;
-    width: @desktop-width;
+    width: 100%;
+    background-color: @bg-white;
   }
 
   .contacts-place {
     position: absolute;
-    top: 95px;
+    top: 92px;
     left: 40px;
     z-index: 10;
     width: 570px;
@@ -230,8 +259,15 @@
   }
 
   .contacts__map-wrap {
-    position: relative;
+    width: 100%;
     height: 399px;
+  }
+
+  .contacts__map-aligner {
+    position: relative;
+    width: @desktop-width;
+    height: 399px;
+    margin: 0 auto;
   }
 
   .contacts__map-image {

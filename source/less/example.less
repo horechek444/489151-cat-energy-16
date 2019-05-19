@@ -1,10 +1,18 @@
 .example {
   position: relative;
+  width: 100%;
+  background-color: @bg-lightgrey;
+}
+
+.example-wrapper {
+  position: relative;
+}
+
+.example__title-wrapper {
   margin: 0 auto;
   padding-top: 18px;
   padding-left: 20px;
   width: 300px;
-  background-color: @bg-lightgrey;
 }
 
 .example__title {
@@ -15,6 +23,12 @@
   font-size: 36px;
   line-height: 60px;
   color: @bg-almostblack;
+}
+
+.example__main-wrapper {
+  margin: 0 auto;
+  padding-left: 20px;
+  width: 300px;
 }
 
 .example__description {
@@ -67,13 +81,13 @@
 }
 
 .example-weight {
-  top: 268px;
-  left: 40px;
-  width: 85px;
+  top: 168px;
+  left: 19px;
+  width: 82px;
 }
 
 .example-time {
-  top: 268px;
+  top: 168px;
   right: 39px;
   width: 87px;
   height: 22px;
@@ -155,23 +169,36 @@
 
 @media (min-width: @tablet-width) {
   .example {
-    width: @tablet-width;
-    padding: 0;
+    width: 100%;
     background-color: @bg-white;
   }
 
+  .example__main-wrapper {
+    margin: 0 auto;
+    padding-left: 0;
+    width: 100%;
+  }
+
   .example-wrapper {
+    position: relative;
     width: 708px;
+    margin: 0 auto;
     padding-left: 30px;
     padding-right: 30px;
   }
 
+  .example__title-wrapper {
+    margin: 0 auto;
+    padding-top: 0;
+    padding-left: 30px;
+    padding-bottom: 63px;
+    width: 738px;
+    background-color: @bg-white;
+  }
+
   .example__title {
     margin: 0;
-    margin-left: 30px;
-    margin-bottom: 40px;
     padding: 0;
-    padding-bottom: 23px;
     font-size: 60px;
     line-height: 60px;
   }
@@ -212,13 +239,13 @@
   }
 
   .example-weight {
-    top: 298px;
+    top: 175px;
     left: 57px;
     width: 107px;
   }
 
   .example-time {
-    top: 298px;
+    top: 175px;
     left: 248px;
     width: 135px;
     height: 22px;
@@ -226,7 +253,7 @@
 
   .example__cost {
     position: absolute;
-    top: 258px;
+    top: 135px;
     right: 30px;
     width: 175px;
     margin: 0;
@@ -236,13 +263,19 @@
     text-align: right;
   }
 
+  .example__color-wrapper {
+    width: 100%;
+    background-color: @bg-lightgrey;
+  }
+
   .example__image-wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    width: @tablet-width;
     height: 462px;
-    margin: 0;
+    margin: 0 auto;
     background-color: @bg-lightgrey;
   }
 
@@ -332,34 +365,53 @@
 
 @media (min-width: @desktop-width) {
   .example {
-    width: @desktop-width;
-    padding: 0;
+    width: 100%;
+    background-color: @bg-lightgrey;
   }
 
-  .example-main-wrapper {
+  .example__main-wrapper {
     display: flex;
+    margin: 0 auto;
+    padding-left: 0;
+    width: 1300px;
+    background-color: @bg-lightgrey;
   }
 
   .example-wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
-    width: 550px;
+    width: 470px;
+    margin: 0;
     padding-left: 40px;
     padding-right: 0;
     background-color: @bg-lightgrey;
   }
 
+  .example__title-wrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: @bg-white;
+  }
+
+  .example__title-aligner {
+    margin: 0 auto;
+    padding-top: 0;
+    padding-left: 40px;
+    padding-bottom: 77px;
+    width: 1260px;
+  }
+
   .example__title {
-    margin-left: 40px;
-    margin-bottom: 52px;
     background-color: @bg-white;
   }
 
   .example__description {
-    width: 435px;
+    width: 430px;
     margin: 0;
     margin-top: 70px;
-    margin-bottom: 69px;
+    margin-bottom: 67px;
     padding: 0;
   }
 
@@ -389,13 +441,13 @@
   }
 
   .example-weight {
-    top: 420px;
+    top: 282px;
     left: 67px;
     width: 107px;
   }
 
   .example-time {
-    top: 420px;
+    top: 282px;
     left: 258px;
     width: 135px;
     height: 22px;
@@ -416,6 +468,11 @@
     padding-left: 60px;
   }
 
+  .example__color-wrapper {
+    width: 750px;
+    background-color: @bg-lightgrey;
+  }
+
   .example__image-wrapper {
     position: relative;
     display: flex;
@@ -429,8 +486,8 @@
 
   .example__image--before {
     position: absolute;
-    top: -190px;
-    left: 37px;
+    top: -191px;
+    left: 99px;
     width: 690px;
     height: 517px;
   }
@@ -439,16 +496,16 @@
     display: none;
     position: absolute;
     top: -190px;
-    left: 37px;
+    left: 99px;
     width: 690px;
     height: 517px;
   }
 
   .example__range-wrapper {
     margin: 0 auto;
-    margin-left: 116px;
+    margin-left: 180px;
     padding-top: 5px;
-    padding-bottom: 68px;
+    padding-bottom: 72px;
   }
 
   .example__range {
