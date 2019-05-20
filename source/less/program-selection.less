@@ -110,15 +110,15 @@ input[type="text"] {
 }
 
 input[name="login"] {
-  max-width: 212px;
+  max-width: 215px;
 }
 
 input[name="weight"] {
-  max-width: 189px;
+  max-width: 192px;
 }
 
 input[name="age"] {
-  max-width: 156px;
+  max-width: 159px;
   margin-bottom: 9px;
 }
 
@@ -223,13 +223,18 @@ input[type="radio"]:disabled + .program-selection__label {
   width: 185px;
   margin: 0;
   margin-left: 18px;
-  margin-right: 22px;
   padding: 0;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
   color: @bg-almostblack;
-  background-color: @bg-white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: @bg-ligthgreen;
+  }
 
   &::after {
     content: "";
@@ -271,8 +276,14 @@ input[type="tel"]:active + .program-selection__phone {
 
 .legend-contact::after {
   top: 15px;
-  right: -115px;
-  width: 99px;
+  right: -370px;
+  width: 350px;
+}
+
+.legend-contact::before {
+  top: 15px;
+  left: -380px;
+  width: 350px;
 }
 
 .legend-contact {
@@ -285,9 +296,15 @@ input[type="tel"]:active + .program-selection__phone {
 }
 
 .legend-comment::after {
-  width: 158px;
   top: 19px;
-  right: -182px;
+  right: -410px;
+  width: 390px;
+}
+
+.legend-comment::before {
+  top: 19px;
+  left: -380px;
+  width: 350px;
 }
 
 .program-selection__comment textarea {
@@ -314,9 +331,15 @@ input[type="tel"]:active + .program-selection__phone {
 }
 
 .legend-optionally::after {
-  width: 136px;
   top: 14px;
-  right: -115px;
+  right: -340px;
+  width: 360px;
+}
+
+.legend-optionally::before {
+  top: 14px;
+  left: -380px;
+  width: 350px;
 }
 
 .optionally-wrapper {
@@ -571,8 +594,8 @@ input[type="checkbox"]:disabled + .program-selection__label {
 
   .legend-contact::before {
     top: 22px;
-    left: -70px;
-    width: 30px;
+    left: -340px;
+    width: 300px;
   }
 
   .program-selection__email {
@@ -622,14 +645,14 @@ input[type="checkbox"]:disabled + .program-selection__label {
 
   .legend-comment::after {
     top: 31px;
-    right: -519px;
-    width: 478px;
+    right: -791px;
+    width: 750px;
   }
 
   .legend-comment::before {
     top: 31px;
-    left: -68px;
-    width: 30px;
+    left: -340px;
+    width: 300px;
   }
 
   .legend-optionally {
@@ -638,14 +661,14 @@ input[type="checkbox"]:disabled + .program-selection__label {
 
   .legend-optionally::after {
     top: 21px;
-    right: -488px;
-    width: 447px;
+    right: -791px;
+    width: 750px;
   }
 
   .legend-optionally::before {
     top: 21px;
-    left: -70px;
-    width: 30px;
+    left: -340px;
+    width: 300px;
   }
 
   .optionally-wrapper {
@@ -834,14 +857,14 @@ input[type="checkbox"]:disabled + .program-selection__label {
 
   .legend-contact::after {
     top: 22px;
-    right: -819px;
-    width: 778px;
+    right: -8042px;
+    width: 8000px;
   }
 
   .legend-contact::before {
     top: 22px;
-    left: -111px;
-    width: 70px;
+    left: -8040px;
+    width: 8000px;
   }
 
   .program-selection__email {
@@ -906,14 +929,14 @@ input[type="checkbox"]:disabled + .program-selection__label {
 
   .legend-comment::after {
     top: 22px;
-    right: -1148px;
-    width: 1112px;
+    right: -8042px;
+    width: 8000px;
   }
 
   .legend-comment::before {
     top: 22px;
-    left: -106px;
-    width: 70px;
+    left: -8040px;
+    width: 8000px;
   }
 
   .legend-optionally {
@@ -922,14 +945,14 @@ input[type="checkbox"]:disabled + .program-selection__label {
 
   .legend-optionally::after {
     top: 22px;
-    right: -1121px;
-    width: 1080px;
+    right: -8072px;
+    width: 8000px;
   }
 
   .legend-optionally::before {
     top: 22px;
-    left: -106px;
-    width: 70px;
+    left: -8040px;
+    width: 8000px;
   }
 
   .optionally-wrapper {
