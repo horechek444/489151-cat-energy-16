@@ -1,4 +1,9 @@
 .page-footer {
+  width: 100%;
+  background-color: @bg-lightgrey;
+}
+
+.page-footer-aligner {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,7 +11,6 @@
   margin: 0 auto;
   padding: 20px;
   padding-top: 39px;
-  background-color: @bg-lightgrey;
 }
 
 .page-footer__logo-name {
@@ -99,6 +103,11 @@
 
 @media (min-width: @tablet-width) {
   .page-footer {
+    width: 100%;
+    background-color: @bg-lightgrey;
+  }
+
+  .page-footer-aligner {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -161,6 +170,11 @@
 
 @media (min-width: @desktop-width) {
   .page-footer {
+    width: 100%;
+    background-color: @bg-lightgrey;
+  }
+
+  .page-footer-aligner {
     width: 1220px;
     padding: 39px 40px;
     padding-bottom: 56px;
