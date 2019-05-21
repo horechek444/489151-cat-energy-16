@@ -17,12 +17,22 @@
   line-height: 24px;
   color: @bg-almostblack;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: -380px;
+    width: 350px;
+    height: 3px;
+    background-color: @bg-ligthgreen;
+  }
+
   &::after {
     content: "";
     position: absolute;
     top: 14px;
-    right: 0;
-    width: 53px;
+    right: -300px;
+    width: 350px;
     height: 3px;
     background-color: @bg-ligthgreen;
   }
@@ -136,23 +146,15 @@
     line-height: 36px;
 
     &::before {
-      content: "";
-      position: absolute;
-      top: 21px;
-      left: -67px;
-      width: 28px;
-      height: 3px;
-      background-color: @bg-ligthgreen;
+      top: 23px;
+      left: -340px;
+      width: 300px;
     }
 
     &::after {
-      content: "";
-      position: absolute;
-      top: 21px;
-      right: 0;
-      width: 327px;
-      height: 3px;
-      background-color: @bg-ligthgreen;
+      top: 23px;
+      right: -323px;
+      width: 650px;
     }
   }
 
@@ -258,17 +260,15 @@
     line-height: 36px;
 
     &::before {
-      content: none;
+      top: 21px;
+      left: -8040px;
+      width: 8000px;
     }
 
     &::after {
-      content: "";
-      position: absolute;
       top: 21px;
-      right: 0;
-      width: 888px;
-      height: 3px;
-      background-color: @bg-ligthgreen;
+      right: -7114px;
+      width: 8000px;
     }
   }
 
